@@ -16,21 +16,30 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+
+  * {
+    @apply border-default;
+  }
 }
 
 @theme {
-  --text-muted: hsl(35, 41%, 60%, 0.6);
-  --text-default: hsl(35, 41%, 75%);
-  --text-inverse: hsl(210, 3%, 12%);
+  --font-satoshi: var(--font-satoshi), sans-serif;
 
-  --bg-default: hsl(0, 0%, 5%);
-  --bg-muted: hsl(35, 41%, 75%, 0.05);
-  --bg-muted-hover: hsl(35, 41%, 75%, 0.1);
-  --bg-primary: hsl(35, 41%, 75%);
-  --bg-primary-hover: hsl(35, 60%, 82%);
-  --bg-secondary: hsl(0, 0%, 10%);
-  --bg-secondary-hover: hsl(0, 0%, 13%);
+  --breakpoint-sm: 810px;
+  --breakpoint-md: 1280px;
 
-  --border-default: hsl(35, 41%, 75%, 0.15);
-  --border-default-hover: hsl(35, 41%, 75%, 0.3);
+  --text-color-muted: hsl(35, 41%, 60%, 0.6);
+  --text-color-default: hsl(35, 41%, 75%);
+  --text-color-inverse: hsl(210, 3%, 12%);
+
+  --background-color-default: hsl(0, 0%, 5%);
+  --background-color-muted: hsl(35, 41%, 75%, 0.05);
+  --background-color-muted-hover: hsl(35, 41%, 75%, 0.1);
+  --background-color-primary: hsl(35, 41%, 75%);
+  --background-color-primary-hover: hsl(35, 60%, 82%);
+  --background-color-secondary: hsl(0, 0%, 10%);
+  --background-color-secondary-hover: hsl(0, 0%, 13%);
+
+  --border-color-default: hsl(35, 41%, 75%, 0.15);
+  --border-color-default-hover: hsl(35, 41%, 75%, 0.3);
 }

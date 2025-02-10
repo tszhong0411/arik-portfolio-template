@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -16,4 +16,21 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+}
+
+@theme {
+  --text-muted: hsl(35, 41%, 60%, 0.6);
+  --text-default: hsl(35, 41%, 75%);
+  --text-inverse: hsl(210, 3%, 12%);
+
+  --bg-default: hsl(0, 0%, 5%);
+  --bg-muted: hsl(35, 41%, 75%, 0.05);
+  --bg-muted-hover: hsl(35, 41%, 75%, 0.1);
+  --bg-primary: hsl(35, 41%, 75%);
+  --bg-primary-hover: hsl(35, 60%, 82%);
+  --bg-secondary: hsl(0, 0%, 10%);
+  --bg-secondary-hover: hsl(0, 0%, 13%);
+
+  --border-default: hsl(35, 41%, 75%, 0.15);
+  --border-default-hover: hsl(35, 41%, 75%, 0.3);
 }

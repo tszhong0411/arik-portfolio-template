@@ -12,6 +12,35 @@ const satoshi = localFont({
       weight: "400",
       style: "normal",
     },
+    {
+      path: "../../public/fonts/Satoshi-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+});
+
+const gambetta = localFont({
+  variable: "--font-gambetta",
+  src: [
+    {
+      path: "../../public/fonts/Gambetta-LightItalic.woff2",
+      weight: "300",
+      style: "italic",
+    },
+  ],
+  display: "swap",
+});
+
+const chillax = localFont({
+  variable: "--font-chillax",
+  src: [
+    {
+      path: "../../public/fonts/Chillax-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
   ],
   display: "swap",
 });
@@ -29,7 +58,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(satoshi.variable, "antialiased bg-default font-satoshi")}
+        className={cn(
+          satoshi.variable,
+          gambetta.variable,
+          chillax.variable,
+          "antialiased bg-default font-satoshi text-default"
+        )}
       >
         <Header />
         <main className="px-6 sm:px-10 md:px-12">{children}</main>

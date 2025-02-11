@@ -8,8 +8,8 @@ import { useEffect, useState } from "react";
 
 export default function Header() {
   return (
-    <div className="pt-4 px-6 sm:pt-6 sm:px-8 md:pt-8 md:px-10 flex justify-center fixed top-0 w-full">
-      <header className="py-2.5 pr-3 pl-5 border flex justify-between items-center w-full sm:w-auto gap-8 bg-muted relative">
+    <div className="pt-4 px-6 sm:pt-6 sm:px-8 md:pt-8 md:px-10 flex justify-center fixed top-0 w-full z-10">
+      <header className="py-2.5 pr-3 pl-5 border flex justify-between items-center w-full sm:w-auto gap-8 bg-muted relative backdrop-blur-[30px]">
         <Link href="/">
           <Logo />
         </Link>
@@ -20,7 +20,7 @@ export default function Header() {
                 <Link
                   key={href}
                   href={href}
-                  className="uppercase text-default text-[13px] tracking-[1.5px] relative group"
+                  className="uppercase text-default text-meta relative group"
                 >
                   {label}
                   <div className="absolute inset-x-0 -bottom-1 w-0 h-px group-hover:w-full transition-[width] bg-primary duration-300 ease-out" />
@@ -40,7 +40,7 @@ function LetsTalkLink() {
   return (
     <Link
       href="/contact"
-      className="uppercase text-xs tracking-[1.5px] leading-[18px] px-4 py-2.5 bg-primary hover:bg-primary-hover text-inverse transition-colors duration-300 rounded-xs flex justify-center"
+      className="uppercase text-meta px-4 py-2.5 bg-primary hover:bg-primary-hover text-inverse transition-colors duration-300 rounded-xs flex justify-center"
     >
       Let&apos;s talk
     </Link>
@@ -100,7 +100,7 @@ function MenuIcon() {
               <Link
                 key={href}
                 href={href}
-                className="uppercase text-default text-[13px] tracking-[1.5px]"
+                className="uppercase text-default text-meta"
               >
                 {label}
               </Link>

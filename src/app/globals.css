@@ -24,9 +24,33 @@
 
 @theme {
   --font-satoshi: var(--font-satoshi), sans-serif;
+  --font-gambetta: var(--font-gambetta), sans-serif;
+  --font-chillax: var(--font-chillax), sans-serif;
 
   --breakpoint-sm: 810px;
   --breakpoint-md: 1280px;
+
+  --text-heading-lg: 128px;
+  --text-heading-lg--line-height: 110%;
+
+  --text-heading-md: 80px;
+  --text-heading-md--line-height: 110%;
+
+  --text-heading-sm: 64px;
+  --text-heading-sm--line-height: 110%;
+
+  --text-meta: 13px;
+  --text-meta--line-height: 120%;
+  --text-meta--letter-spacing: 1.5px;
+
+  --text-lg: 24px;
+  --text-lg--line-height: 150%;
+
+  --text-md: 22px;
+  --text-md--line-height: 150%;
+
+  --text-sm: 18px;
+  --text-sm--line-height: 150%;
 
   --text-color-muted: hsl(35, 41%, 60%, 0.6);
   --text-color-default: hsl(35, 41%, 75%);

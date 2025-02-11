@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -22,7 +23,7 @@
   }
 }
 
-@theme {
+@theme inline {
   --font-satoshi: var(--font-satoshi), sans-serif;
   --font-gambetta: var(--font-gambetta), sans-serif;
   --font-chillax: var(--font-chillax), sans-serif;
@@ -66,4 +67,25 @@
 
   --border-color-default: hsl(35, 41%, 75%, 0.15);
   --border-color-default-hover: hsl(35, 41%, 75%, 0.3);
+
+  --animate-marquee-left: marquee-left var(--duration, 40s) linear infinite;
+  --animate-marquee-up: marquee-up var(--duration, 40s) linear infinite;
+
+  @keyframes marquee-left {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  @keyframes marquee-up {
+    from {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }

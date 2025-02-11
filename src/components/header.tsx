@@ -1,16 +1,101 @@
+"use client";
+
 import { NAV_LINKS } from "@/config";
 import Link from "next/link";
 import Logo from "./logo";
+import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   return (
-    <div className="pt-4 px-6 sm:pt-6 sm:px-8 md:pt-8 md:px-10 flex justify-center fixed inset-x-0 top-0">
-      <header className="py-2.5 pr-3 pl-5 border flex justify-between items-center gap-8 bg-muted">
+    <div className="pt-4 px-6 sm:pt-6 sm:px-8 md:pt-8 md:px-10 flex justify-center sticky top-0 w-full">
+      <header className="py-2.5 pr-3 pl-5 border flex justify-between items-center w-full sm:w-auto gap-8 bg-muted relative">
         <Link href="/">
           <Logo />
         </Link>
-        <div className="flex justify-between items-center gap-6">
-          <nav className="flex items-center gap-5">
+        <div className="flex justify-between items-center gap-3 sm:gap-6">
+          <nav className="sm:flex items-center gap-5 hidden">
+            {NAV_LINKS.filter((link) => !link.mobileOnly).map(
+              ({ label, href }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="uppercase text-default text-[13px] tracking-[1.5px] relative group"
+                >
+                  {label}
+                  <div className="absolute inset-x-0 -bottom-1 w-0 h-px group-hover:w-full transition-[width] bg-primary duration-300 ease-out" />
+                </Link>
+              )
+            )}
+          </nav>
+          <LetsTalkLink />
+          <MenuIcon />
+        </div>
+      </header>
+    </div>
+  );
+}
+
+function LetsTalkLink() {
+  return (
+    <Link
+      href="/contact"
+      className="uppercase text-xs tracking-[1.5px] leading-[18px] px-4 py-2.5 bg-primary hover:bg-primary-hover transition-colors duration-300 rounded-xs flex justify-center"
+    >
+      Let&apos;s talk
+    </Link>
+  );
+}
+
+function MenuIcon() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    console.log(isOpen);
+  }, [isOpen]);
+
+  return (
+    <>
+      <motion.button
+        className="w-10 h-7.5 flex flex-col gap-2 sm:hidden relative"
+        type="button"
+        aria-label="Open Menu"
+        onClick={() => setIsOpen((prev) => !prev)}
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+      >
+        <motion.div
+          className="bg-primary w-7.5 h-px absolute top-1/4 inset-x-1.25 origin-right"
+          variants={{
+            open: { rotate: "-30deg" },
+          }}
+          transition={{
+            ease: "easeOut",
+          }}
+        />
+        <motion.div
+          className="bg-primary w-7.5 h-px absolute top-1/2 inset-x-1.25 origin-center"
+          variants={{
+            open: { opacity: 0, scaleX: 0.4 },
+            closed: { opacity: 1, scaleX: 1 },
+          }}
+          transition={{
+            ease: "easeOut",
+          }}
+        />
+        <motion.div
+          className="bg-primary w-7.5 h-px absolute top-3/4 inset-x-1.25 origin-right"
+          variants={{
+            open: { rotate: "30deg" },
+          }}
+          transition={{
+            ease: "easeOut",
+          }}
+        />
+      </motion.button>
+      {isOpen && (
+        <nav className="bg-muted absolute top-17.5 inset-x-0 border p-6 flex flex-col gap-6">
+          <div className="flex flex-col gap-5 items-center">
             {NAV_LINKS.map(({ label, href }) => (
               <Link
                 key={href}
@@ -20,17 +105,10 @@ export default function Header() {
                 {label}
               </Link>
             ))}
-          </nav>
-          <div className="px-4 py-2.5 bg-primary rounded-xs flex">
-            <Link
-              href="/contact"
-              className="uppercase text-xs tracking-[1.5px] leading-[18px]"
-            >
-              Let&apos;s talk
-            </Link>
           </div>
-        </div>
-      </header>
-    </div>
+          <LetsTalkLink />
+        </nav>
+      )}
+    </>
   );
 }

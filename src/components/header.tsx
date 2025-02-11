@@ -94,7 +94,7 @@ function MenuIcon() {
         />
       </motion.button>
       {isOpen && (
-        <nav className="bg-muted absolute top-17.5 inset-x-0 border p-6 flex flex-col gap-6">
+        <nav className="absolute top-17.5 inset-x-0 border p-6 flex flex-col gap-6 bg-[#181716]">
           <div className="flex flex-col gap-5 items-center">
             {NAV_LINKS.map(({ label, href }) => (
               <Link

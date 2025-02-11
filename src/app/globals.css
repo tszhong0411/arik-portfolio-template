@@ -31,6 +31,15 @@
   --breakpoint-sm: 810px;
   --breakpoint-md: 1280px;
 
+  --text-p-default-sm: 14px;
+  --text-p-default-sm--line-height: 160%;
+
+  --text-p-default-md: 16px;
+  --text-p-default-md--line-height: 160%;
+
+  --text-p-default-lg: 16px;
+  --text-p-default-lg--line-height: 180%;
+
   --text-heading-lg: 128px;
   --text-heading-lg--line-height: 110%;
 
@@ -39,6 +48,14 @@
 
   --text-heading-sm: 64px;
   --text-heading-sm--line-height: 110%;
+
+  --text-heading-h4-lg: 24px;
+  --text-heading-h4-lg--line-height: 130%;
+  --text-heading-h4-sm--letter-spacing: 1px;
+
+  --text-heading-h4-sm: 20px;
+  --text-heading-h4-sm--line-height: 130%;
+  --text-heading-h4-sm--letter-spacing: 1px;
 
   --text-meta: 13px;
   --text-meta--line-height: 120%;

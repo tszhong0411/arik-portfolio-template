@@ -1,6 +1,5 @@
-import { CARDS, type Card } from "@/config";
-import { ArrowUpRightIcon } from "lucide-react";
-import Link from "next/link";
+import { SERVICE_CARDS, type ServiceCard } from "@/config";
+import ButtonLink from "./button-link";
 
 export default function Services() {
   return (
@@ -8,14 +7,14 @@ export default function Services() {
       id="services"
       className="pt-12 sm:pt-16 md:pt-20 flex flex-col gap-4 md:flex-row md:gap-8"
     >
-      {CARDS.map((card) => (
+      {SERVICE_CARDS.map((card) => (
         <Card key={card.number} {...card} />
       ))}
     </section>
   );
 }
 
-type CardProps = Card;
+type CardProps = ServiceCard;
 
 function Card({ number, title, description, link }: CardProps) {
   return (
@@ -32,12 +31,7 @@ function Card({ number, title, description, link }: CardProps) {
         </div>
       </div>
       <div className="w-max">
-        <Link href={link.href} className="flex items-center gap-3 group">
-          <div className="size-8 rounded-full border bg-muted flex justify-center items-center group-hover:border-default-hover group-hover:bg-muted-hover transition-colors duration-300">
-            <ArrowUpRightIcon className="size-4 group-hover:rotate-45 transition-transform duration-300" />
-          </div>
-          <div className="uppercase text-meta">{link.label}</div>
-        </Link>
+        <ButtonLink href={link.href} label={link.label} />
       </div>
     </div>
   );

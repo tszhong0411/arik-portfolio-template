@@ -13,14 +13,14 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Styleguide", href: "/styleguide", mobileOnly: true },
 ];
 
-export type Card = {
+export type ServiceCard = {
   number: string;
   title: string;
   description: string;
   link: NavLink;
 };
 
-export const CARDS: Card[] = [
+export const SERVICE_CARDS: ServiceCard[] = [
   {
     number: "01",
     title: "Web Design",

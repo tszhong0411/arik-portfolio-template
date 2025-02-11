@@ -1,5 +1,5 @@
 import { CARDS, type Card } from "@/config";
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Services() {
@@ -34,7 +34,7 @@ function Card({ number, title, description, link }: CardProps) {
       <div className="w-max">
         <Link href={link.href} className="flex items-center gap-3 group">
           <div className="size-8 rounded-full border bg-muted flex justify-center items-center group-hover:border-default-hover group-hover:bg-muted-hover transition-colors duration-300">
-            <ArrowRightIcon className="size-4" />
+            <ArrowUpRightIcon className="size-4 group-hover:rotate-45 transition-transform duration-300" />
           </div>
           <div className="uppercase text-meta">{link.label}</div>
         </Link>

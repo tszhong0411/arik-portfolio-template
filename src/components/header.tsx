@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function Header() {
   return (
-    <div className="pt-4 px-6 sm:pt-6 sm:px-8 md:pt-8 md:px-10 flex justify-center sticky top-0 w-full">
+    <div className="pt-4 px-6 sm:pt-6 sm:px-8 md:pt-8 md:px-10 flex justify-center fixed top-0 w-full">
       <header className="py-2.5 pr-3 pl-5 border flex justify-between items-center w-full sm:w-auto gap-8 bg-muted relative">
         <Link href="/">
           <Logo />
@@ -40,7 +40,7 @@ function LetsTalkLink() {
   return (
     <Link
       href="/contact"
-      className="uppercase text-xs tracking-[1.5px] leading-[18px] px-4 py-2.5 bg-primary hover:bg-primary-hover transition-colors duration-300 rounded-xs flex justify-center"
+      className="uppercase text-xs tracking-[1.5px] leading-[18px] px-4 py-2.5 bg-primary hover:bg-primary-hover text-inverse transition-colors duration-300 rounded-xs flex justify-center"
     >
       Let&apos;s talk
     </Link>

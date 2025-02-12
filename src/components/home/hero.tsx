@@ -1,7 +1,7 @@
 import { ArrowDownIcon } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import heroImage from "~/images/hero.png";
+import ButtonLink from "./button-link";
 
 export default function Hero() {
   return (
@@ -23,12 +23,12 @@ export default function Hero() {
           </p>
         </div>
         <div className="flex justify-center">
-          <Link href="#services" className="flex items-center gap-4 group">
-            <div className="size-10 rounded-full border bg-muted flex justify-center items-center group-hover:border-default-hover group-hover:bg-muted-hover transition-colors duration-300">
-              <ArrowDownIcon className="size-4" />
-            </div>
-            <div className="uppercase">My services</div>
-          </Link>
+          <ButtonLink
+            href="#services"
+            label="My services"
+            icon={<ArrowDownIcon className="size-4" />}
+            buttonClassName="size-10"
+          />
         </div>
       </div>
     </section>

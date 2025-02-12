@@ -49,6 +49,14 @@
   --text-heading-sm: 64px;
   --text-heading-sm--line-height: 110%;
 
+  --text-heading-h2-md: 40px;
+  --text-heading-h2-md--line-height: 120%;
+  --text-heading-h2-md--letter-spacing: 1px;
+
+  --text-heading-h2-sm: 32px;
+  --text-heading-h2-sm--line-height: 110%;
+  --text-heading-h2-sm--letter-spacing: 1px;
+
   --text-heading-h4-lg: 24px;
   --text-heading-h4-lg--line-height: 130%;
   --text-heading-h4-sm--letter-spacing: 1px;
@@ -81,6 +89,8 @@
   --background-color-primary-hover: hsl(35, 60%, 82%);
   --background-color-secondary: hsl(0, 0%, 10%);
   --background-color-secondary-hover: hsl(0, 0%, 13%);
+
+  --background-image-noise: url("../../public/images/noise.png");
 
   --border-color-default: hsl(35, 41%, 75%, 0.15);
   --border-color-default-hover: hsl(35, 41%, 75%, 0.3);

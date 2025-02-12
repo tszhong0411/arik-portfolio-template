@@ -1,8 +1,18 @@
-type NavLink = {
-  label: string;
+import nova from "~/images/nova.png";
+import solar from "~/images/solar.png";
+import sonic from "~/images/sonic.png";
+import space from "~/images/space.png";
+
+import { StaticImageData } from "next/image";
+
+type BaseLink = {
   href: string;
-  mobileOnly?: boolean;
+  label: string;
 };
+
+type NavLink = {
+  mobileOnly?: boolean;
+} & BaseLink;
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Services", href: "/services" },
@@ -17,7 +27,7 @@ export type ServiceCard = {
   number: string;
   title: string;
   description: string;
-  link: NavLink;
+  link: BaseLink;
 };
 
 export const SERVICE_CARDS: ServiceCard[] = [
@@ -41,5 +51,34 @@ export const SERVICE_CARDS: ServiceCard[] = [
     description:
       "Proven SEO strategies that enhance your online performance, bringing you to the forefront of organic search results.",
     link: { label: "About SEO", href: "/services#seo" },
+  },
+];
+
+export type SelectedWorkCard = {
+  link: BaseLink;
+  image: StaticImageData;
+  category: string;
+};
+
+export const SELECTED_WORK_CARDS: SelectedWorkCard[] = [
+  {
+    link: { label: "Space", href: "/work/space" },
+    image: space,
+    category: "Web Design",
+  },
+  {
+    link: { label: "Nova", href: "/work/nova" },
+    image: nova,
+    category: "Web Design",
+  },
+  {
+    link: { label: "Sonic", href: "/work/sonic" },
+    image: sonic,
+    category: "Web Design",
+  },
+  {
+    link: { label: "Solar", href: "/work/solar" },
+    image: solar,
+    category: "Web Design",
   },
 ];

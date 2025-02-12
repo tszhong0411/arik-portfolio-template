@@ -126,7 +126,7 @@ function Step({
           isEven ? "md:order-1" : "md:order-3"
         )}
       >
-        <div className="p-8 sm:p-10 md:p-12 flex flex-col justify-between gap-8 border border-[#343230] bg-muted relative">
+        <div className="p-8 sm:p-10 md:p-12 flex flex-col justify-between gap-8 border border-card-border bg-muted relative">
           <Label className="sm:absolute sm:right-6 sm:top-6">{label}</Label>
           <div className="space-y-4">
             <div className="space-y-1">

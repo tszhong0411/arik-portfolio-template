@@ -18,7 +18,7 @@ type CardProps = ServiceCard;
 
 function Card({ number, title, description, link }: CardProps) {
   return (
-    <div className="p-8 sm:p-10 md:p-12 flex flex-col justify-between gap-8 border border-[#343230] bg-muted flex-1">
+    <div className="p-8 sm:p-10 md:p-12 flex flex-col justify-between gap-8 border border-card-border bg-muted flex-1">
       <div className="space-y-2">
         <div className="space-y-1">
           <div className="text-muted text-meta">{number}</div>

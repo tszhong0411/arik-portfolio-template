@@ -8,13 +8,13 @@ const satoshi = localFont({
   variable: "--font-satoshi",
   src: [
     {
-      path: "../../public/fonts/Satoshi-Regular.woff2",
-      weight: "400",
+      path: "../../public/fonts/Satoshi-Light.woff2",
+      weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Satoshi-Light.woff2",
-      weight: "300",
+      path: "../../public/fonts/Satoshi-Regular.woff2",
+      weight: "400",
       style: "normal",
     },
   ],

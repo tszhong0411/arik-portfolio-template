@@ -81,6 +81,10 @@
   --text-meta--line-height: 120%;
   --text-meta--letter-spacing: 1.5px;
 
+  --text-meta-sm: 12px;
+  --text-meta-sm--line-height: 100%;
+  --text-meta-sm--letter-spacing: 1px;
+
   --text-lg: 24px;
   --text-lg--line-height: 150%;
 

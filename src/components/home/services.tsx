@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="pt-12 sm:pt-16 md:pt-20 flex flex-col gap-4 md:flex-row md:gap-8"
+      className="pt-12 sm:pt-16 md:pt-20 flex flex-col gap-4 max-w-350 mx-auto md:flex-row md:gap-8"
     >
       {SERVICE_CARDS.map((card) => (
         <Card key={card.number} {...card} />

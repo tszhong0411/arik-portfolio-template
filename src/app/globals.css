@@ -19,7 +19,7 @@
   }
 
   * {
-    @apply border-default;
+    @apply border-border;
   }
 }
 
@@ -40,7 +40,19 @@
   --text-p-default-lg: 16px;
   --text-p-default-lg--line-height: 180%;
 
-  --text-heading-lg: 128px;
+  --text-p-large-sm: 18px;
+  --text-p-large-sm--line-height: 140%;
+
+  --text-p-large-md: 20px;
+  --text-p-large-md--line-height: 150%;
+
+  --text-p-large-lg: 20px;
+  --text-p-large-lg--line-height: 160%;
+
+  --text-heading-xl: 128px;
+  --text-heading-xl--line-height: 110%;
+
+  --text-heading-lg: 96px;
   --text-heading-lg--line-height: 110%;
 
   --text-heading-md: 80px;
@@ -92,8 +104,8 @@
 
   --background-image-noise: url("../../public/images/noise.png");
 
-  --border-color-default: hsl(35, 41%, 75%, 0.15);
-  --border-color-default-hover: hsl(35, 41%, 75%, 0.3);
+  --color-border: hsl(35, 41%, 75%, 0.15);
+  --color-border-hover: hsl(35, 41%, 75%, 0.3);
 
   --animate-marquee-left: marquee-left var(--duration, 40s) linear infinite;
   --animate-marquee-up: marquee-up var(--duration, 40s) linear infinite;

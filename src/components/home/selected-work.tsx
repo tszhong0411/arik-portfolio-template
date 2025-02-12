@@ -2,7 +2,7 @@ import Link from "next/link";
 import ButtonLink, { buttonLinkVariant } from "./button-link";
 import Image from "next/image";
 import { SELECTED_WORK_CARDS, SelectedWorkCard } from "@/config";
-import { ArrowRightIcon, ArrowUpRightIcon } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import { cn } from "@/utils/cn";
 
 export default function SelectedWork() {

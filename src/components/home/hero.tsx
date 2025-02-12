@@ -13,7 +13,7 @@ export default function Hero() {
       />
       <div className="space-y-12">
         <div className="flex flex-col justify-center items-center gap-4">
-          <div className="text-center text-heading-sm sm:text-heading-md md:text-heading-lg">
+          <div className="text-center text-heading-sm sm:text-heading-md md:text-heading-xl">
             <p className="font-light">Web Designer</p>
             <p className="font-light font-gambetta">& Developer</p>
           </div>

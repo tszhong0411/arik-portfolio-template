@@ -12,7 +12,7 @@ type ButtonLinkProps = {
 };
 
 export const buttonLinkVariant = cva({
-  base: "size-8 rounded-full border bg-muted flex justify-center items-center group-hover:border-default-hover group-hover:bg-muted-hover transition-colors duration-300",
+  base: "size-8 rounded-full border bg-muted flex justify-center items-center group-hover:border-border-hover group-hover:bg-muted-hover transition-colors duration-300",
 });
 
 export default function ButtonLink({

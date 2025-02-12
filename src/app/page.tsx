@@ -1,5 +1,6 @@
 import Hero from "@/components/home/hero";
 import Logos from "@/components/home/logos";
+import Process from "@/components/home/process";
 import SelectedWork from "@/components/home/selected-work";
 import Services from "@/components/home/services";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Logos />
       <Services />
       <SelectedWork />
+      <Process />
     </>
   );
 }

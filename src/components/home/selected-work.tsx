@@ -7,7 +7,7 @@ import { cn } from "@/utils/cn";
 
 export default function SelectedWork() {
   return (
-    <section className="pt-16 sm:pt-24 md:pt-32 flex flex-col gap-8 max-w-350 mx-auto">
+    <section className="pt-16 sm:pt-24 md:pt-32 flex flex-col gap-8 max-w-350 mx-auto px-6 sm:px-10 md:px-12">
       <div className="flex flex-col gap-4 justify-center items-center sm:flex-row sm:justify-between">
         <h2 className="text-heading-h2-sm sm:text-heading-h2-md font-light">
           Selected Work

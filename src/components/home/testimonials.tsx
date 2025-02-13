@@ -3,7 +3,7 @@ import { type Testimonial, TESTIMONIALS } from "@/config";
 
 export default function Testimonials() {
   return (
-    <section className="pt-12 sm:pt-16 md:pt-40 flex flex-col gap-12 max-w-300 mx-auto">
+    <section className="pt-12 sm:pt-16 md:pt-40 flex flex-col gap-12 max-w-300 mx-auto px-6 sm:px-10 md:px-12">
       <div className="flex flex-col justify-center items-center gap-2">
         <Title />
         <Description />

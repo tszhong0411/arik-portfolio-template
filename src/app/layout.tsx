@@ -66,7 +66,7 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main className="px-6 sm:px-10 md:px-12">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

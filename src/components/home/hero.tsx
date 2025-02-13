@@ -1,6 +1,6 @@
 import { ArrowDownIcon } from "lucide-react";
 import Image from "next/image";
-import heroImage from "~/images/hero.png";
+import heroImage from "~/images/arik.png";
 import ButtonLink from "./button-link";
 
 export default function Hero() {

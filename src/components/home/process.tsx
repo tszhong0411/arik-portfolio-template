@@ -6,7 +6,7 @@ import { PROCESS_STEPS, ProcessStep } from "@/config";
 
 export default function Process() {
   return (
-    <section className="pt-16 max-w-350 mx-auto flex flex-col justify-center items-center sm:pt-24 md:pt-40">
+    <section className="pt-16 max-w-350 mx-auto flex flex-col justify-center items-center sm:pt-24 md:pt-40 px-6 sm:px-10 md:px-12">
       <div className="flex flex-col justify-center items-center gap-8 w-full">
         <div className="flex flex-col justify-center items-center gap-4">
           <Title />

@@ -2,8 +2,22 @@ import nova from "~/images/nova.png";
 import solar from "~/images/solar.png";
 import sonic from "~/images/sonic.png";
 import space from "~/images/space.png";
+import matthew from "~/images/matthew-smith.png";
+import andrea from "~/images/andrea-lee.png";
+import catharine from "~/images/catharine-davis.png";
+import josh from "~/images/josh-kim.png";
+import andreas from "~/images/andreas-thompson.png";
+import liam from "~/images/liam-chen.png";
 
 import { StaticImageData } from "next/image";
+import {
+  ClientLogo1,
+  ClientLogo2,
+  ClientLogo3,
+  ClientLogo4,
+  ClientLogo6,
+  ClientLogo7,
+} from "./components/home/logos";
 
 type BaseLink = {
   href: string;
@@ -151,6 +165,81 @@ export const PROCESS_STEPS: ProcessStep[] = [
       "Personal workshop",
       "Personalized video tutorials",
       "Edit text and images directly on your website",
+    ],
+  },
+];
+
+export type Testimonial = {
+  logo: React.ReactNode;
+  title: string;
+  description: string;
+  image: StaticImageData;
+  name: string;
+  company: string;
+};
+
+export const TESTIMONIALS: { list: Testimonial[] }[] = [
+  {
+    list: [
+      {
+        logo: <ClientLogo3 width={30} height={20} />,
+        title: "Amazing Results with Arik's Premium Web Design Services.",
+        description:
+          "Arik is a top-notch web designer who created a stunning website for my business. He was attentive to my needs and provided excellent customer service throughout the entire process. I highly recommend his services.",
+        image: matthew,
+        name: "Matthew Smith",
+        company: "Sonic",
+      },
+      {
+        logo: <ClientLogo1 width={117} height={25} />,
+        title: "Professional, Collaborative Web Design Experience with Arik.",
+        description:
+          "I had the pleasure of working with Arik on a website development project and was blown away by his expertise and professionalism. He made the process seamless and delivered a website that exceeded our expectations. I highly recommend Arik for all your web development needs.",
+        image: andrea,
+        name: "Andrea Lee",
+        company: "Stars",
+      },
+      {
+        logo: <ClientLogo4 width={52} height={20} />,
+        title: "Web Design and Content Solutions: Stand Out from the Crowd.",
+        description:
+          "Arik's SEO services have helped my business improve its online presence and increase traffic to our website. He is knowledgeable, professional, and provides excellent results. I highly recommend him for all your SEO needs.",
+        image: catharine,
+        name: "Catharine Davis",
+        company: "Supersonic",
+      },
+    ],
+  },
+  {
+    list: [
+      {
+        logo: <ClientLogo6 width={24} height={20} />,
+        title: "Expert Framer and SEO Services: Excellent Work, Great Results.",
+        description:
+          "Working with Arik on my website redesign was a fantastic experience. He was able to take my vision and turn it into a beautiful and functional website. His attention to detail and creative approach is unmatched. I couldn't be happier with the end result.",
+        image: josh,
+        name: "Josh Kim",
+        company: "Solar",
+      },
+      {
+        logo: <ClientLogo7 width={114} height={30} />,
+        title: "Expertise in Web Design: Second to None with Arik.",
+        description:
+          "Arik is not only an exceptional web designer, but also a pleasure to work with. He took the time to understand my business and its unique needs, and created a website that perfectly represents my brand. I highly recommend Arik's services to anyone looking for a top-quality web designer.",
+        image: andreas,
+        name: "Andreas Thompson",
+        company: "Design Inc.",
+      },
+      {
+        logo: <ClientLogo2 width={80} height={20} />,
+        title:
+          "High-Quality Web Design: Exceptional Attention to Detail with Arik.",
+        description:
+          "Arik's development services are top-notch. He is able to take complex ideas and turn them into functional, user-friendly websites. His attention to detail and commitment to customer satisfaction are unmatched. I highly recommend Arik for all your web development needs.",
+        image: liam,
+        name: "Liam Chen",
+        company: "Design Solutions",
+      },
     ],
   },
 ];

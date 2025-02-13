@@ -3,6 +3,7 @@ import Logos from "@/components/home/logos";
 import Process from "@/components/home/process";
 import SelectedWork from "@/components/home/selected-work";
 import Services from "@/components/home/services";
+import Testimonials from "@/components/home/testimonials";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Services />
       <SelectedWork />
       <Process />
+      <Testimonials />
     </>
   );
 }

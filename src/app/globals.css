@@ -40,6 +40,15 @@
   --text-p-default-lg: 16px;
   --text-p-default-lg--line-height: 180%;
 
+  --text-p-medium-sm: 16px;
+  --text-p-medium-sm--line-height: 160%;
+
+  --text-p-medium-md: 18px;
+  --text-p-medium-md--line-height: 160%;
+
+  --text-p-small: 14px;
+  --text-p-small--line-height: 180%;
+
   --text-p-large-sm: 18px;
   --text-p-large-sm--line-height: 140%;
 
@@ -61,6 +70,9 @@
   --text-heading-sm: 64px;
   --text-heading-sm--line-height: 110%;
 
+  --text-heading-xs: 56px;
+  --text-heading-xs--line-height: 110%;
+
   --text-heading-h2-md: 40px;
   --text-heading-h2-md--line-height: 120%;
   --text-heading-h2-md--letter-spacing: 1px;
@@ -71,11 +83,9 @@
 
   --text-heading-h4-lg: 24px;
   --text-heading-h4-lg--line-height: 130%;
-  --text-heading-h4-sm--letter-spacing: 1px;
 
   --text-heading-h4-sm: 20px;
   --text-heading-h4-sm--line-height: 130%;
-  --text-heading-h4-sm--letter-spacing: 1px;
 
   --text-meta: 13px;
   --text-meta--line-height: 120%;

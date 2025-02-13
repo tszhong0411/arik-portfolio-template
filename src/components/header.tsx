@@ -40,7 +40,7 @@ function LetsTalkLink() {
   return (
     <Link
       href="/contact"
-      className="uppercase text-meta px-4 py-2.5 bg-primary hover:bg-primary-hover text-inverse transition-colors duration-300 rounded-xs flex justify-center"
+      className="uppercase text-button px-4 py-2.5 bg-primary hover:bg-primary-hover text-inverse transition-colors duration-300 rounded-xs flex justify-center"
     >
       Let&apos;s talk
     </Link>

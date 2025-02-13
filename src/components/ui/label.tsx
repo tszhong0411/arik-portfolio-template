@@ -1,16 +1,31 @@
 import { cn } from "@/utils/cn";
+import { cva, VariantProps } from "cva";
 
-type LabelProps = React.ComponentProps<"div">;
+const labelVariants = cva({
+  base: "rounded-xs backdrop-blur-[15px] text-xs tracking-widest uppercase px-2 py-1.25 max-w-max",
+  variants: {
+    variant: {
+      default: "bg-muted border",
+      primary: "bg-primary text-inverse",
+      secondary: "bg-secondary",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+});
 
-export default function Label({ children, className, ...rest }: LabelProps) {
+type LabelProps = React.ComponentProps<"div"> &
+  VariantProps<typeof labelVariants>;
+
+export default function Label({
+  children,
+  className,
+  variant,
+  ...rest
+}: LabelProps) {
   return (
-    <div
-      className={cn(
-        "bg-muted rounded-xs border backdrop-blur-[15px] text-meta-sm uppercase p-2 w-max",
-        className
-      )}
-      {...rest}
-    >
+    <div className={cn(labelVariants({ variant, className }))} {...rest}>
       {children}
     </div>
   );

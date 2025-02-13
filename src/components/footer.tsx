@@ -1,3 +1,5 @@
+"use client";
+
 import {
   CMS_LINKS,
   PAGE_LINKS,
@@ -5,17 +7,21 @@ import {
   UTILITY_PAGE_LINKS,
 } from "@/config";
 import Logo from "./logo";
-import { buttonLinkVariant } from "./home/button-link";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "lucide-react";
-import ToTop from "./to-top";
+import ToTop from "./ui/to-top";
+import Button from "./ui/button";
+import { buttonTextIconVariants } from "./ui/button-text";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+
   return (
-    <footer className="bg-muted py-12 px-6 sm:py-16 sm:px-10 md:py-24 md:px-12 flex flex-col gap-16">
-      <div className="grid gap-12 sm:gap-16 sm:grid-cols-2 md:grid-cols-4">
-        <div className="flex flex-col items-center sm:items-start gap-12 sm:gap-8">
+    <footer className="bg-muted py-12 px-6 md:py-16 md:px-10 xl:py-24 xl:px-12 flex flex-col gap-16">
+      <div className="grid gap-12 md:gap-16 md:grid-cols-2 xl:grid-cols-4">
+        <div className="flex flex-col items-center md:items-start gap-12 md:gap-8">
           <Logo />
           <div className="space-y-4">
             {SOCIAL_LINKS.map((link) => (
@@ -26,7 +32,7 @@ export default function Footer() {
                 rel="noopener"
                 className="flex items-center gap-4"
               >
-                <div className={cn(buttonLinkVariant(), "size-10")}>
+                <div className={cn(buttonTextIconVariants(), "size-10")}>
                   <link.icon className="size-4" />
                 </div>
                 {link.name}
@@ -34,51 +40,61 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-center sm:items-start gap-8">
-          <p className="text-heading-h5-lg font-light">Pages</p>
-          <div className="flex flex-col items-center sm:items-start gap-6">
+        <div className="flex flex-col items-center md:items-start gap-8">
+          <p className="text-xl font-light">Pages</p>
+          <div className="flex flex-col items-center md:items-start gap-6">
             {PAGE_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-meta text-muted uppercase"
+                className={cn(
+                  "text-sm text-muted uppercase tracking-widest",
+                  pathname === link.href && "text-default"
+                )}
               >
                 {link.label}
               </Link>
             ))}
           </div>
-          <a
-            href="https://www.framer.com/marketplace/creator/pawel-gola?via=pawelgola"
-            target="_blank"
-            rel="noopener"
-            className="py-2.5 px-4 rounded-xs inline-flex justify-center items-center gap-2 bg-primary text-inverse uppercase text-button group hover:bg-primary-hover transition-colors duration-300"
-          >
-            More templates{" "}
-            <ArrowUpRightIcon className="size-4 group-hover:rotate-45 transition-transform duration-300" />
-          </a>
+          <Button className="group" variant="primary" asChild>
+            <a
+              href="https://www.framer.com/marketplace/creator/pawel-gola?via=pawelgola"
+              target="_blank"
+              rel="noopener"
+            >
+              More templates{" "}
+              <ArrowUpRightIcon className="size-4 group-hover:rotate-45 transition-transform duration-300" />
+            </a>
+          </Button>
         </div>
-        <div className="flex flex-col items-center sm:items-start gap-8">
-          <p className="text-heading-h5-lg font-light">CMS</p>
-          <div className="flex flex-col items-center sm:items-start gap-6">
+        <div className="flex flex-col items-center md:items-start gap-8">
+          <p className="text-xl font-light">CMS</p>
+          <div className="flex flex-col items-center md:items-start gap-6">
             {CMS_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-meta text-muted uppercase"
+                className={cn(
+                  "text-sm text-muted uppercase tracking-widest",
+                  pathname === link.href && "text-default"
+                )}
               >
                 {link.label}
               </Link>
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-center sm:items-start gap-8">
-          <p className="text-heading-h5-lg font-light">Utility Pages</p>
-          <div className="flex flex-col items-center sm:items-start gap-6">
+        <div className="flex flex-col items-center md:items-start gap-8">
+          <p className="text-xl font-light">Utility Pages</p>
+          <div className="flex flex-col items-center md:items-start gap-6">
             {UTILITY_PAGE_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-meta text-muted uppercase"
+                className={cn(
+                  "text-sm text-muted uppercase tracking-widest",
+                  pathname === link.href && "text-default"
+                )}
               >
                 {link.label}
               </Link>
@@ -87,15 +103,15 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex flex-col items-center gap-4">
-        <div className="text-p-small font-chillax font-light">
-          © Made by{" "}
+        <div className="text-sm font-chillax font-light">
+          © Design by{" "}
           <a
-            href="https://templates.gola.io/"
+            href="https://templates.gola.io/template/arik"
             target="_blank"
             rel="noopener"
             className="underline"
           >
-            Gola Templates
+            Pawel Gola
           </a>
           . Powered by{" "}
           <a
@@ -108,7 +124,7 @@ export default function Footer() {
           </a>
           .
         </div>
-        <ToTop />
+        <ToTop href="#main" className="xl:hidden" />
       </div>
     </footer>
   );

@@ -4,27 +4,24 @@ import { NAV_LINKS } from "@/config";
 import Link from "next/link";
 import Logo from "./logo";
 import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import NavItem from "./ui/nav-item";
+import { buttonVariants } from "./ui/button";
 
 export default function Header() {
   return (
-    <div className="pt-4 px-6 sm:pt-6 sm:px-8 md:pt-8 md:px-10 flex justify-center fixed top-0 w-full z-10">
-      <header className="py-2.5 pr-3 pl-5 border flex justify-between items-center w-full sm:w-auto gap-8 bg-muted relative backdrop-blur-[30px]">
+    <div className="pt-4 px-6 md:pt-6 md:px-8 xl:pt-8 xl:px-10 flex justify-center fixed top-0 w-full z-10">
+      <header className="py-2.5 pr-3 pl-5 border flex justify-between items-center w-full md:w-auto gap-8 bg-muted relative backdrop-blur-[30px]">
         <Link href="/">
           <Logo />
         </Link>
-        <div className="flex justify-between items-center gap-3 sm:gap-6">
-          <nav className="sm:flex items-center gap-5 hidden">
+        <div className="flex justify-between items-center gap-3 md:gap-6">
+          <nav className="md:flex items-center gap-5 hidden">
             {NAV_LINKS.filter((link) => !link.mobileOnly).map(
               ({ label, href }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className="uppercase text-default text-meta relative group"
-                >
+                <NavItem key={href} href={href}>
                   {label}
-                  <div className="absolute inset-x-0 -bottom-1 w-0 h-px group-hover:w-full transition-[width] bg-primary duration-300 ease-out" />
-                </Link>
+                </NavItem>
               )
             )}
           </nav>
@@ -38,10 +35,7 @@ export default function Header() {
 
 function LetsTalkLink() {
   return (
-    <Link
-      href="/contact"
-      className="uppercase text-button px-4 py-2.5 bg-primary hover:bg-primary-hover text-inverse transition-colors duration-300 rounded-xs flex justify-center"
-    >
+    <Link href="/contact" className={buttonVariants({ variant: "primary" })}>
       Let&apos;s talk
     </Link>
   );
@@ -50,14 +44,10 @@ function LetsTalkLink() {
 function MenuIcon() {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    console.log(isOpen);
-  }, [isOpen]);
-
   return (
     <>
       <motion.button
-        className="w-10 h-7.5 flex flex-col gap-2 sm:hidden relative"
+        className="w-10 h-7.5 flex flex-col gap-2 md:hidden relative"
         type="button"
         aria-label="Open Menu"
         onClick={() => setIsOpen((prev) => !prev)}
@@ -100,7 +90,7 @@ function MenuIcon() {
               <Link
                 key={href}
                 href={href}
-                className="uppercase text-default text-meta"
+                className="uppercase text-default text-sm"
               >
                 {label}
               </Link>

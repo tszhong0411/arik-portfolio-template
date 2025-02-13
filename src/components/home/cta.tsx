@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Marquee from "../ui/marquee";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "lucide-react";
+import Button from "../ui/button";
 
 export default function CTA() {
   return (
@@ -12,31 +13,30 @@ export default function CTA() {
       >
         {Array.from({ length: 12 }).map((_, i) => (
           <Fragment key={i}>
-            <div className="uppercase text-meta">Let&apos;s Talk</div>
-            <div className="text-meta">+++</div>
+            <div className="uppercase text-sm">Let&apos;s Talk</div>
+            <div className="text-sm">+++</div>
           </Fragment>
         ))}
       </Marquee>
-      <div className="py-16 px-6 sm:px-10 sm:py-24 md:px-12 md:py-40">
+      <div className="py-16 px-6 md:px-10 md:py-24 xl:px-12 xl:py-40">
         <div className="flex flex-col items-center max-w-300 gap-12 mx-auto">
           <div className="flex flex-col items-center gap-4">
-            <p className="uppercase text-meta">Project in mind?</p>
-            <div className="text-heading-sm sm:text-heading-md md:text-heading-xl font-light text-center">
+            <p className="uppercase text-sm">Project in mind?</p>
+            <div className="text-6xl md:text-7xl xl:text-9xl font-light text-center">
               <p>Let’s make your</p>
               <p className="font-gambetta italic">Website shine</p>
             </div>
-            <p className="text-p-large-lg font-chillax font-light max-w-125 text-center">
+            <p className="text-xl font-chillax font-light max-w-125 text-center">
               Premium web design, development, and SEO services to help your
               business stand out.
             </p>
           </div>
-          <Link
-            href="/contact"
-            className="py-2.5 px-4 rounded-xs inline-flex justify-center items-center gap-2 bg-primary text-inverse uppercase text-button group hover:bg-primary-hover transition-colors duration-300"
-          >
-            Get in touch{" "}
-            <ArrowUpRightIcon className="size-4 group-hover:rotate-45 transition-transform duration-300" />
-          </Link>
+          <Button className="group" variant="primary" asChild>
+            <Link href="/contact">
+              Get in touch{" "}
+              <ArrowUpRightIcon className="size-4 group-hover:rotate-45 transition-transform duration-300" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

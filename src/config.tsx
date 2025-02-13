@@ -20,6 +20,13 @@ import {
 } from "./components/home/logos";
 import { FaBehance, FaDribbble, FaInstagram, FaTwitter } from "react-icons/fa";
 import { IconType } from "react-icons";
+import Button from "./components/ui/button";
+import { ArrowUpRightIcon } from "lucide-react";
+import ButtonText from "./components/ui/button-text";
+import ButtonScroll from "./components/ui/button-scroll";
+import Label from "./components/ui/label";
+import ToTop from "./components/ui/to-top";
+import NavItem from "./components/ui/nav-item";
 
 type BaseLink = {
   href: string;
@@ -329,5 +336,138 @@ export const UTILITY_PAGE_LINKS: BaseLink[] = [
   {
     label: "Licensing",
     href: "/licensing",
+  },
+];
+
+type StyleguideSection = {
+  title: string;
+  variants: {
+    title: string;
+    component: React.ReactNode;
+  }[];
+};
+
+export const STYLEGUIDE_SECTIONS: StyleguideSection[] = [
+  {
+    title: "Button",
+    variants: [
+      {
+        title: "Default",
+        component: (
+          <Button className="uppercase" variant="default">
+            Button
+          </Button>
+        ),
+      },
+      {
+        title: "Primary",
+        component: (
+          <Button className="uppercase" variant="primary">
+            Button
+          </Button>
+        ),
+      },
+      {
+        title: "Secondary",
+        component: (
+          <Button className="uppercase" variant="secondary">
+            Button
+          </Button>
+        ),
+      },
+      {
+        title: "With Icon",
+        component: (
+          <Button className="uppercase" variant="secondary">
+            Button <ArrowUpRightIcon className="size-4" />
+          </Button>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Button Text",
+    variants: [
+      {
+        title: "Default",
+        component: (
+          <ButtonText icon={<ArrowUpRightIcon className="size-4" />}>
+            Button Text
+          </ButtonText>
+        ),
+      },
+      {
+        title: "Primary",
+        component: (
+          <ButtonText
+            icon={<ArrowUpRightIcon className="size-4" />}
+            variant="primary"
+          >
+            Button Text
+          </ButtonText>
+        ),
+      },
+      {
+        title: "Secondary",
+        component: (
+          <ButtonText
+            icon={<ArrowUpRightIcon className="size-4" />}
+            variant="secondary"
+          >
+            Button Text
+          </ButtonText>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Button Scroll",
+    variants: [
+      {
+        title: "Default",
+        component: <ButtonScroll>Text</ButtonScroll>,
+      },
+    ],
+  },
+  {
+    title: "Label",
+    variants: [
+      {
+        title: "Default",
+        component: <Label>Label</Label>,
+      },
+      {
+        title: "Primary",
+        component: <Label variant="primary">Label</Label>,
+      },
+      {
+        title: "Secondary",
+        component: <Label variant="secondary">Label</Label>,
+      },
+    ],
+  },
+  {
+    title: "Nav",
+    variants: [
+      {
+        title: "Default",
+        component: (
+          <div className="flex flex-col gap-4 [&>a]:max-w-max">
+            <NavItem href="#">Nav Item</NavItem>
+            <NavItem href="#">Nav Item</NavItem>
+            <NavItem href="#">Nav Item</NavItem>
+          </div>
+        ),
+      },
+    ],
+  },
+  {
+    title: "To Top Scroll",
+    variants: [
+      {
+        title: "Default",
+        component: <ToTop href="#" />,
+      },
+    ],
   },
 ];

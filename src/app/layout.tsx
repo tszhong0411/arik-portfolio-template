@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/header";
 import { cn } from "@/utils/cn";
-import Footer from "@/components/footer";
 
 const satoshi = localFont({
   variable: "--font-satoshi",
@@ -55,11 +53,11 @@ export const metadata: Metadata = {
     "Arik is a minimal & modern Portfolio Next.js Template perfectly suited for freelancers, designers, agencies or your personal portfolio.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+type RootLayoutProps = {
   children: React.ReactNode;
-}>) {
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
@@ -70,9 +68,7 @@ export default function RootLayout({
           "antialiased bg-default font-satoshi text-default scroll-smooth"
         )}
       >
-        <Header />
         <main id="main">{children}</main>
-        <Footer />
       </body>
     </html>
   );

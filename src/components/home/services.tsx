@@ -1,11 +1,13 @@
 import { SERVICE_CARDS, type ServiceCard } from "@/config";
-import ButtonLink from "./button-link";
+import ButtonText from "../ui/button-text";
+import Link from "next/link";
+import { ArrowUpRightIcon } from "lucide-react";
 
 export default function Services() {
   return (
     <section
       id="services"
-      className="pt-12 px-6 flex flex-col gap-4 max-w-350 mx-auto md:flex-row md:gap-8 sm:px-10 md:px-12 sm:pt-16 md:pt-20"
+      className="pt-12 px-6 flex flex-col gap-4 max-w-350 mx-auto xl:flex-row xl:gap-8 md:px-10 xl:px-12 md:pt-16 xl:pt-20"
     >
       {SERVICE_CARDS.map((card) => (
         <Card key={card.number} {...card} />
@@ -18,20 +20,21 @@ type CardProps = ServiceCard;
 
 function Card({ number, title, description, link }: CardProps) {
   return (
-    <div className="p-8 sm:p-10 md:p-12 flex flex-col justify-between gap-8 border border-card-border bg-muted flex-1">
+    <div className="p-8 md:p-10 xl:p-12 flex flex-col justify-between gap-8 border border-card-border bg-muted flex-1">
       <div className="space-y-2">
         <div className="space-y-1">
-          <div className="text-muted text-meta">{number}</div>
-          <h4 className="text-heading-h4-sm sm:text-heading-h4-lg uppercase font-light">
-            {title}
-          </h4>
+          <div className="text-muted text-sm">{number}</div>
+          <h4 className="text-xl md:text-2xl uppercase font-light">{title}</h4>
         </div>
-        <div className="text-p-default-sm sm:text-p-default-md font-chillax font-light">
+        <div className="text-sm md:text-base font-chillax font-light">
           {description}
         </div>
       </div>
       <div className="w-max">
-        <ButtonLink href={link.href} label={link.label} />
+        {/* <ButtonLink href={link.href} label={link.label} /> */}
+        <ButtonText icon={<ArrowUpRightIcon className="size-4" />} asChild>
+          <Link href={link.href}>{link.label}</Link>
+        </ButtonText>
       </div>
     </div>
   );

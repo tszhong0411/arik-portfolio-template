@@ -1,4 +1,6 @@
-export default function Logo() {
+type LogoProps = React.SVGProps<SVGSVGElement>;
+
+export default function Logo(props: LogoProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +8,7 @@ export default function Logo() {
       height="22"
       viewBox="0 0 58 22"
       fill="none"
+      {...props}
     >
       <g clipPath="url(#logo)">
         <path

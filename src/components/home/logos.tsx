@@ -2,7 +2,7 @@ import Marquee from "../ui/marquee";
 
 export default function Logos() {
   return (
-    <section className="pt-12 px-6 max-w-350 mx-auto md:pt-16 sm:px-10 md:px-12">
+    <section className="pt-12 px-6 max-w-350 mx-auto xl:pt-16 md:px-10 xl:px-12">
       <Marquee
         fade={true}
         className="gap-32"

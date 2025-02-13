@@ -18,6 +18,8 @@ import {
   ClientLogo6,
   ClientLogo7,
 } from "./components/home/logos";
+import { FaBehance, FaDribbble, FaInstagram, FaTwitter } from "react-icons/fa";
+import { IconType } from "react-icons";
 
 type BaseLink = {
   href: string;
@@ -241,5 +243,91 @@ export const TESTIMONIALS: { list: Testimonial[] }[] = [
         company: "Design Solutions",
       },
     ],
+  },
+];
+
+type SocialLink = {
+  icon: IconType;
+  href: string;
+  name: string;
+};
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    icon: FaInstagram,
+    href: "https://www.instagram.com/gola.design/",
+    name: "Instagram",
+  },
+  {
+    icon: FaTwitter,
+    href: "https://twitter.com/gola99",
+    name: "Twitter",
+  },
+  {
+    icon: FaDribbble,
+    href: "https://dribbble.com/pawelgola",
+    name: "Dribbble",
+  },
+  {
+    icon: FaBehance,
+    href: "https://www.behance.net/pawelgola",
+    name: "Behance",
+  },
+];
+
+export const PAGE_LINKS: BaseLink[] = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "Services",
+    href: "/services",
+  },
+  {
+    label: "About",
+    href: "/about",
+  },
+  {
+    label: "Pricing",
+    href: "/pricing",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
+];
+
+export const CMS_LINKS: BaseLink[] = [
+  {
+    label: "Work",
+    href: "/work",
+  },
+  {
+    label: "Work single",
+    href: "/work/sonic",
+  },
+  {
+    label: "Blog",
+    href: "/blog",
+  },
+  {
+    label: "Blog single",
+    href: "/blog/the-importance-of-content-in-driving-website-traffic",
+  },
+];
+
+export const UTILITY_PAGE_LINKS: BaseLink[] = [
+  {
+    label: "Styleguide",
+    href: "/styleguide",
+  },
+  {
+    label: "404 Error Page",
+    href: "/404",
+  },
+  {
+    label: "Licensing",
+    href: "/licensing",
   },
 ];

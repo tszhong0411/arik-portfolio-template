@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header";
 import { cn } from "@/utils/cn";
+import Footer from "@/components/footer";
 
 const satoshi = localFont({
   variable: "--font-satoshi",
@@ -62,11 +63,12 @@ export default function RootLayout({
           satoshi.variable,
           gambetta.variable,
           chillax.variable,
-          "antialiased bg-default font-satoshi text-default"
+          "antialiased bg-default font-satoshi text-default scroll-smooth"
         )}
       >
         <Header />
-        <main>{children}</main>
+        <main id="main">{children}</main>
+        <Footer />
       </body>
     </html>
   );

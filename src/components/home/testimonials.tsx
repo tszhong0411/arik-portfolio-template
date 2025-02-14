@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { type Testimonial, TESTIMONIALS } from "@/config";
+import Card from "../ui/card";
 
 export default function Testimonials() {
   return (
@@ -52,7 +53,7 @@ function Testimonial({
   company,
 }: TestimonialProps) {
   return (
-    <div className="p-8 xl:p-12 border bg-muted rounded-xs space-y-8">
+    <Card className="p-8 xl:p-12 space-y-8">
       <div className="space-y-8">
         {logo}
         <div className="space-y-2">
@@ -69,6 +70,6 @@ function Testimonial({
           <p className="text-sm font-chillax font-light">{company}</p>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }

@@ -3,6 +3,7 @@ import { ArrowDownIcon } from "lucide-react";
 import Label from "../ui/label";
 import { PROCESS_STEPS, ProcessStep } from "@/config";
 import { buttonTextIconVariants } from "../ui/button-text";
+import Card from "../ui/card";
 
 export default function Process() {
   return (
@@ -128,7 +129,7 @@ function Step({
           isEven ? "xl:order-1" : "xl:order-3"
         )}
       >
-        <div className="p-8 md:p-10 xl:p-12 flex flex-col justify-between gap-8 border border-card-border bg-muted relative">
+        <Card className="p-8 md:p-10 xl:p-12 flex flex-col justify-between gap-8 relative">
           <Label className="md:absolute md:right-6 md:top-6">{label}</Label>
           <div className="space-y-4">
             <div className="space-y-1">
@@ -148,7 +149,7 @@ function Step({
               ))}
             </List>
           )}
-        </div>
+        </Card>
       </div>
     </div>
   );

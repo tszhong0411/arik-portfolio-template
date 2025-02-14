@@ -44,7 +44,6 @@
 
   --color-border: hsl(35, 41%, 75%, 0.15);
   --color-border-hover: hsl(35, 41%, 75%, 0.3);
-  --color-card-border: hsl(30, 4%, 20%);
 
   --animate-marquee-left: marquee-left var(--duration, 40s) linear infinite;
   --animate-marquee-up: marquee-up var(--duration, 40s) linear infinite;

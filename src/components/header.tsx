@@ -91,6 +91,7 @@ function MenuIcon() {
                 key={href}
                 href={href}
                 className="uppercase text-default text-sm"
+                onClick={() => setIsOpen(false)}
               >
                 {label}
               </Link>

@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import Marquee from "../ui/marquee";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "lucide-react";
-import Button from "../ui/button";
+import Marquee from "./ui/marquee";
+import Button from "./ui/button";
 
 export default function CTA() {
   return (

@@ -10,7 +10,7 @@ import { buttonVariants } from "./ui/button";
 
 export default function Header() {
   return (
-    <div className="pt-4 px-6 md:pt-6 md:px-8 xl:pt-8 xl:px-10 flex justify-center fixed top-0 w-full z-10">
+    <div className="pt-4 px-6 md:pt-6 md:px-8 xl:pt-8 xl:px-10 flex justify-center fixed top-0 w-full z-50">
       <header className="py-2.5 pr-3 pl-5 border flex justify-between items-center w-full md:w-auto gap-8 bg-muted relative backdrop-blur-[30px]">
         <Link href="/">
           <Logo />

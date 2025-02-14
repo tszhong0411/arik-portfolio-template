@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { SELECTED_WORK_CARDS, SelectedWorkCard } from "@/config";
+import { WORK_CARDS, WorkCard } from "@/config";
 import { ArrowRightIcon, ArrowUpRightIcon } from "lucide-react";
 import { cn } from "@/utils/cn";
 import ButtonText, { buttonTextIconVariants } from "../ui/button-text";
@@ -16,7 +16,7 @@ export default function SelectedWork() {
         </ButtonText>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-8">
-        {SELECTED_WORK_CARDS.map((card) => (
+        {WORK_CARDS.map((card) => (
           <Card key={card.link.href} {...card} />
         ))}
       </div>
@@ -24,7 +24,7 @@ export default function SelectedWork() {
   );
 }
 
-type CardProps = SelectedWorkCard;
+type CardProps = WorkCard;
 
 function Card({ link, category, image }: CardProps) {
   return (
@@ -39,7 +39,7 @@ function Card({ link, category, image }: CardProps) {
       </div>
       <div className="bg-noise bg-repeat bg-[length:128px] absolute inset-0 z-10 opacity-10" />
       <Image src={image} alt={link.label} className="absolute inset-0" />
-      <div className="p-6 absolute bottom-0 inset-x-0">
+      <div className="p-4 md:p-6 absolute bottom-0 inset-x-0">
         <div className="backdrop-blur-[15px] bg-muted border py-3 px-4 rounded-xs flex justify-between items-center">
           <h3 className="text-2xl font-light">{link.label}</h3>
           <p className="text-sm">{category}</p>

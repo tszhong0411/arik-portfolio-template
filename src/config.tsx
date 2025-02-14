@@ -77,32 +77,37 @@ export const SERVICE_CARDS: ServiceCard[] = [
   },
 ];
 
-export type SelectedWorkCard = {
+export type WorkCard = {
   link: BaseLink;
   image: StaticImageData;
   category: string;
+  selected?: boolean;
 };
 
-export const SELECTED_WORK_CARDS: SelectedWorkCard[] = [
+export const WORK_CARDS: WorkCard[] = [
   {
     link: { label: "Space", href: "/work/space" },
     image: space,
     category: "Web Design",
+    selected: true,
   },
   {
     link: { label: "Nova", href: "/work/nova" },
     image: nova,
     category: "Web Design",
+    selected: true,
   },
   {
     link: { label: "Sonic", href: "/work/sonic" },
     image: sonic,
     category: "Web Design",
+    selected: true,
   },
   {
     link: { label: "Solar", href: "/work/solar" },
     image: solar,
     category: "Web Design",
+    selected: true,
   },
 ];
 

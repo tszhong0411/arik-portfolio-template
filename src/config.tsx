@@ -471,3 +471,110 @@ export const STYLEGUIDE_SECTIONS: StyleguideSection[] = [
     ],
   },
 ];
+
+type Stat = {
+  title: string;
+  number: string;
+};
+
+export const STATS: Stat[] = [
+  {
+    title: "Clients",
+    number: "150+",
+  },
+  {
+    title: "Projects",
+    number: "300+",
+  },
+  {
+    title: "Happy Clients",
+    number: "100%",
+  },
+  {
+    title: "Followers",
+    number: "100k",
+  },
+];
+
+type Service = {
+  id: string;
+  category: string;
+  title: string;
+  image: StaticImageData;
+  items: {
+    title: string;
+    description: string;
+  }[];
+};
+
+export const SERVICES: Service[] = [
+  {
+    id: "webdesign",
+    category: "Webdesign",
+    title: "Transforming Your Ideas into Reality",
+    image: space,
+    items: [
+      {
+        title: "Concept",
+        description:
+          "I take time to understand your business needs and audience to develop a unique concept for your website. I'll create wireframes that serve as the foundation for your site's design and functionality.",
+      },
+      {
+        title: "UX / UI Design",
+        description:
+          "I'll design a user-friendly interface that is visually appealing and engages your target audience. Your website will be created to meet your brand's needs and goals while ensuring a seamless user experience.",
+      },
+      {
+        title: "Prototype",
+        description:
+          "With an interactive prototype, you'll have the ability to test your website's functionality before it goes live. This will ensure that your website's design and user experience are optimized for your audience's needs and preferences.",
+      },
+    ],
+  },
+  {
+    id: "development",
+    category: "Development",
+    title: "Developing High-Performance Websites and Web Applications",
+    image: solar,
+    items: [
+      {
+        title: "Next.js",
+        description:
+          "I specialize in developing web applications using Next.js. From custom animations to complex interactions, I bring your web app to life.",
+      },
+      {
+        title: "CMS Integration",
+        description:
+          "I can help you streamline your content management process by integrating a CMS into your website. Say goodbye to manual updates and hello to efficiency.",
+      },
+      {
+        title: "Web Design System",
+        description:
+          "I use a modular design approach to create a web design system that ensures consistency throughout your website. This results in a professional and cohesive online presence.",
+      },
+    ],
+  },
+  {
+    id: "seo",
+    category: "SEO & Content",
+    title: "Boosting Your Website's Organic Search Traffic",
+    image: sonic,
+    items: [
+      {
+        title: "Research",
+        description:
+          "I conduct thorough research to identify the best keywords and strategies to improve your website's search engine ranking.",
+      },
+      {
+        title: "SEO Ranking",
+        description:
+          "My SEO services are designed to improve your website's visibility on search engines, increasing your organic traffic and driving more leads and sales.",
+      },
+      {
+        title: "SEO Support",
+        description:
+          "With ongoing SEO support, I ensure that your website stays up-to-date with the latest SEO best practices, keeping you ahead of the competition.",
+      },
+    ],
+  },
+];

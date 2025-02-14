@@ -1,5 +1,4 @@
 import About from "@/components/home/about";
-import CTA from "@/components/home/cta";
 import Hero from "@/components/home/hero";
 import Logos from "@/components/home/logos";
 import Process from "@/components/home/process";
@@ -17,7 +16,6 @@ export default function Home() {
       <Process />
       <Testimonials />
       <About />
-      <CTA />
     </>
   );
 }

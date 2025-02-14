@@ -77,14 +77,14 @@ export const SERVICE_CARDS: ServiceCard[] = [
   },
 ];
 
-export type WorkCard = {
+export type ProjectCard = {
   link: BaseLink;
   image: StaticImageData;
   category: string;
   selected?: boolean;
 };
 
-export const WORK_CARDS: WorkCard[] = [
+export const PROJECT_CARDS: ProjectCard[] = [
   {
     link: { label: "Space", href: "/work/space" },
     image: space,

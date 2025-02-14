@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
-import { WORK_CARDS, WorkCard } from "@/config";
-import { ArrowRightIcon, ArrowUpRightIcon } from "lucide-react";
-import { cn } from "@/utils/cn";
-import ButtonText, { buttonTextIconVariants } from "../ui/button-text";
+import { PROJECT_CARDS } from "@/config";
+import { ArrowUpRightIcon } from "lucide-react";
+import ButtonText from "../ui/button-text";
+import ProjectCard from "../project-card";
 
 export default function SelectedWork() {
   return (
@@ -16,36 +15,10 @@ export default function SelectedWork() {
         </ButtonText>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-8">
-        {WORK_CARDS.map((card) => (
-          <Card key={card.link.href} {...card} />
+        {PROJECT_CARDS.filter((p) => p.selected).map((project) => (
+          <ProjectCard key={project.link.href} {...project} />
         ))}
       </div>
     </section>
-  );
-}
-
-type CardProps = WorkCard;
-
-function Card({ link, category, image }: CardProps) {
-  return (
-    <Link href={link.href} className="relative border rounded-xs group">
-      <div
-        className={cn(
-          buttonTextIconVariants(),
-          "size-10 opacity-0 transition-all group-hover:opacity-100 group-hover:-rotate-45 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
-        )}
-      >
-        <ArrowRightIcon className="size-5" />
-      </div>
-      <div className="bg-noise bg-repeat bg-[length:128px] absolute inset-0 z-10 opacity-10" />
-      <Image src={image} alt={link.label} className="absolute inset-0" />
-      <div className="p-4 md:p-6 absolute bottom-0 inset-x-0">
-        <div className="backdrop-blur-[15px] bg-muted border py-3 px-4 rounded-xs flex justify-between items-center">
-          <h3 className="text-2xl font-light">{link.label}</h3>
-          <p className="text-sm">{category}</p>
-        </div>
-      </div>
-      <div className="aspect-[1.33333] w-full" />
-    </Link>
   );
 }

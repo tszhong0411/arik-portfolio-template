@@ -1,15 +1,20 @@
 import Logo from "@/components/logo";
 import NavItem from "@/components/ui/nav-item";
 import { STYLEGUIDE_SECTIONS } from "@/config";
+import Link from "next/link";
 
 export default function StyleguidePage() {
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="py-4 bg-muted backdrop-blur-[30px] md:hidden">
-        <Logo className="mx-auto" />
+      <div className="py-4 bg-muted backdrop-blur-[30px] fixed top-0 inset-x-0 md:hidden">
+        <Link href="/">
+          <Logo className="mx-auto" />
+        </Link>
       </div>
       <div className="hidden md:flex w-50 flex-col gap-12 p-8 border-r">
-        <Logo />
+        <Link href="/">
+          <Logo />
+        </Link>
         <ul className="flex flex-col gap-6">
           {STYLEGUIDE_SECTIONS.map((section, i) => (
             <li key={i}>

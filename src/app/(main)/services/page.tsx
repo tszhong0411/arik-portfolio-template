@@ -1,6 +1,6 @@
-import Hero from "./hero";
-import Stats from "./stats";
-import Webdesign from "./webdesign";
+import Hero from "./_components/hero";
+import Stats from "./_components/stats";
+import Webdesign from "./_components/webdesign";
 
 export default function ServicesPage() {
   return (

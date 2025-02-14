@@ -1,7 +1,7 @@
 import Link from "next/link";
-import ButtonScroll from "../ui/button-scroll";
 import macbook from "~/images/macbook.png";
 import Image from "next/image";
+import ButtonScroll from "@/components/ui/button-scroll";
 
 export default function Hero() {
   return (

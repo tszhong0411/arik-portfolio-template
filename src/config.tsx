@@ -77,37 +77,124 @@ export const SERVICE_CARDS: ServiceCard[] = [
   },
 ];
 
-export type ProjectCard = {
-  link: BaseLink;
+export type Project = {
+  title: string;
+  description: string;
   image: StaticImageData;
-  category: string;
   selected?: boolean;
+  slug: string;
+  meta: {
+    title: string;
+    content: { label: string; href?: string };
+  }[];
+  details: {
+    headline: string;
+    challenge: string;
+    goal: string;
+    result: string;
+  };
 };
 
-export const PROJECT_CARDS: ProjectCard[] = [
+export const PROJECTS: Project[] = [
   {
-    link: { label: "Space", href: "/work/space" },
+    title: "Space",
+    description:
+      "Modern and visually appealing website that reflected the client's brand.",
     image: space,
-    category: "Web Design",
+    slug: "space",
     selected: true,
+    meta: [
+      { title: "Client", content: { label: "Pawel Gola" } },
+      { title: "Timeline", content: { label: "2 Weeks" } },
+      { title: "Category", content: { label: "Web Design" } },
+      {
+        title: "Website",
+        content: { label: "gola.io", href: "https://templates.gola.io" },
+      },
+    ],
+    details: {
+      headline: "Concept, Design, and Development. All-in-one.",
+      challenge:
+        "Our client was struggling to attract and retain customers due to an outdated and non-responsive website that didn't align with their brand identity.",
+      goal: "Our goal was to create a modern and visually appealing website that reflected the client's brand and delivered a seamless user experience. The website needed to be responsive, easy to navigate, and optimized for search engines to improve their online visibility.",
+      result:
+        "Our team developed a custom website design that was not only visually stunning but also user-friendly and optimized for search engines. The client's website now showcases their products and services in a professional and engaging manner, and has seen a significant increase in organic traffic and customer engagement. The client is thrilled with the final result and has received positive feedback from their customers.",
+    },
   },
   {
-    link: { label: "Nova", href: "/work/nova" },
+    title: "Nova",
+    description:
+      "Modern and visually appealing website that reflected the client's brand.",
     image: nova,
-    category: "Web Design",
+    slug: "nova",
     selected: true,
+    meta: [
+      { title: "Client", content: { label: "Pawel Gola" } },
+      { title: "Timeline", content: { label: "2 Weeks" } },
+      { title: "Category", content: { label: "Web Design" } },
+      {
+        title: "Website",
+        content: { label: "gola.io", href: "https://templates.gola.io" },
+      },
+    ],
+    details: {
+      headline: "Concept, Design, and Development. All-in-one.",
+      challenge:
+        "Our client was struggling to attract and retain customers due to an outdated and non-responsive website that didn't align with their brand identity.",
+      goal: "Our goal was to create a modern and visually appealing website that reflected the client's brand and delivered a seamless user experience. The website needed to be responsive, easy to navigate, and optimized for search engines to improve their online visibility.",
+      result:
+        "Our team developed a custom website design that was not only visually stunning but also user-friendly and optimized for search engines. The client's website now showcases their products and services in a professional and engaging manner, and has seen a significant increase in organic traffic and customer engagement. The client is thrilled with the final result and has received positive feedback from their customers.",
+    },
   },
   {
-    link: { label: "Sonic", href: "/work/sonic" },
+    title: "Sonic",
+    description:
+      "Modern and visually appealing website that reflected the client's brand.",
     image: sonic,
-    category: "Web Design",
+    slug: "sonic",
     selected: true,
+    meta: [
+      { title: "Client", content: { label: "Pawel Gola" } },
+      { title: "Timeline", content: { label: "2 Weeks" } },
+      { title: "Category", content: { label: "Web Design" } },
+      {
+        title: "Website",
+        content: { label: "gola.io", href: "https://templates.gola.io" },
+      },
+    ],
+    details: {
+      headline: "Concept, Design, and Development. All-in-one.",
+      challenge:
+        "Our client was struggling to attract and retain customers due to an outdated and non-responsive website that didn't align with their brand identity.",
+      goal: "Our goal was to create a modern and visually appealing website that reflected the client's brand and delivered a seamless user experience. The website needed to be responsive, easy to navigate, and optimized for search engines to improve their online visibility.",
+      result:
+        "Our team developed a custom website design that was not only visually stunning but also user-friendly and optimized for search engines. The client's website now showcases their products and services in a professional and engaging manner, and has seen a significant increase in organic traffic and customer engagement. The client is thrilled with the final result and has received positive feedback from their customers.",
+    },
   },
   {
-    link: { label: "Solar", href: "/work/solar" },
+    title: "Solar",
+    description:
+      "Modern and visually appealing website that reflected the client's brand.",
     image: solar,
-    category: "Web Design",
+    slug: "solar",
     selected: true,
+    meta: [
+      { title: "Client", content: { label: "Pawel Gola" } },
+      { title: "Timeline", content: { label: "2 Weeks" } },
+      { title: "Category", content: { label: "Web Design" } },
+      {
+        title: "Website",
+        content: { label: "gola.io", href: "https://templates.gola.io" },
+      },
+    ],
+    details: {
+      headline: "Concept, Design, and Development. All-in-one.",
+      challenge:
+        "Our client was struggling to attract and retain customers due to an outdated and non-responsive website that didn't align with their brand identity.",
+      goal: "Our goal was to create a modern and visually appealing website that reflected the client's brand and delivered a seamless user experience. The website needed to be responsive, easy to navigate, and optimized for search engines to improve their online visibility.",
+      result:
+        "Our team developed a custom website design that was not only visually stunning but also user-friendly and optimized for search engines. The client's website now showcases their products and services in a professional and engaging manner, and has seen a significant increase in organic traffic and customer engagement. The client is thrilled with the final result and has received positive feedback from their customers.",
+    },
   },
 ];
 

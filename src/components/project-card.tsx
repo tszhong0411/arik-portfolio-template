@@ -1,19 +1,21 @@
-import { type ProjectCard } from "@/config";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { buttonTextIconVariants } from "./ui/button-text";
 import Image from "next/image";
 import { ArrowRightIcon } from "lucide-react";
+import { Project } from "@/config";
+import Noise from "./noise";
 
-type ProjectCardProps = ProjectCard;
+type ProjectCardProps = Project;
 
 export default function ProjectCard({
-  link,
-  category,
+  title,
+  slug,
+  meta,
   image,
 }: ProjectCardProps) {
   return (
-    <Link href={link.href} className="relative border rounded-xs group">
+    <Link href={`/work/${slug}`} className="relative border rounded-xs group">
       <div
         className={cn(
           buttonTextIconVariants(),
@@ -22,13 +24,13 @@ export default function ProjectCard({
       >
         <ArrowRightIcon className="size-5" />
       </div>
-      <div className="bg-noise bg-repeat bg-[length:128px] absolute inset-0 z-10 opacity-10" />
-      <Image src={image} alt={link.label} className="absolute inset-0" />
+      <Noise />
+      <Image src={image} alt={title} className="absolute inset-0" />
       <div className="p-4 md:p-6 absolute bottom-0 inset-x-0 z-20">
         <div className="backdrop-blur-[15px] bg-muted border py-2 px-4 rounded-xs flex justify-between items-center">
-          <h3 className="text-xl md:text-2xl font-light">{link.label}</h3>
+          <h3 className="text-xl md:text-2xl font-light">{title}</h3>
           <p className="text-xs md:text-sm uppercase tracking-widest">
-            {category}
+            {meta.find((m) => m.title === "category")?.content.label}
           </p>
         </div>
       </div>

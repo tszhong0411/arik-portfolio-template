@@ -28,7 +28,7 @@
   --font-gambetta: var(--font-gambetta), sans-serif;
   --font-chillax: var(--font-chillax), sans-serif;
 
-  --text-color-muted: hsl(35, 41%, 60%, 0.6);
+  --text-color-muted: hsl(35, 41%, 75%, 0.6);
   --text-color-default: hsl(35, 41%, 75%);
   --text-color-inverse: hsl(210, 3%, 12%);
 

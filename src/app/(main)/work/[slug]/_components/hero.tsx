@@ -1,5 +1,6 @@
 import Noise from "@/components/noise";
 import ButtonScroll from "@/components/ui/button-scroll";
+import Card from "@/components/ui/card";
 import { Project, PROJECTS } from "@/config";
 import Image from "next/image";
 import Link from "next/link";
@@ -48,13 +49,13 @@ export default function Hero({ slug }: HeroProps) {
 
 function MetaCard({ title, content }: Project["meta"][0]) {
   return (
-    <div className="flex flex-col items-center gap-2 p-4 bg-muted border uppercase text-sm tracking-widest">
+    <Card className="flex flex-col items-center gap-2 p-4 uppercase text-sm tracking-widest">
       <p className="text-muted">{title}</p>
       {content.href ? (
         <Link href={content.href}>{content.label}</Link>
       ) : (
         <p>{content.label}</p>
       )}
-    </div>
+    </Card>
   );
 }

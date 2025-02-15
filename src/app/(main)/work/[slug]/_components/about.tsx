@@ -1,3 +1,4 @@
+import Card from "@/components/ui/card";
 import { PROJECTS } from "@/config";
 import { notFound } from "next/navigation";
 
@@ -23,24 +24,24 @@ export default function About({ slug }: AboutProps) {
         </p>
       </div>
       <div className="flex flex-col gap-4 xl:flex-1">
-        <div className="flex flex-col gap-2 p-12 border rounded-xs bg-muted">
+        <Card className="flex flex-col gap-2 p-12">
           <p className="text-xl font-light">Challenge</p>
           <p className="text-sm font-chillax font-light text-muted">
             {details.challenge}
           </p>
-        </div>
-        <div className="flex flex-col gap-2 p-12 border rounded-xs bg-muted">
+        </Card>
+        <Card className="flex flex-col gap-2 p-12">
           <p className="text-xl font-light">Goal</p>
           <p className="text-sm font-chillax font-light text-muted">
             {details.goal}
           </p>
-        </div>
-        <div className="flex flex-col gap-2 p-12 border rounded-xs bg-muted">
+        </Card>
+        <Card className="flex flex-col gap-2 p-12">
           <p className="text-xl font-light">Result</p>
           <p className="text-sm font-chillax font-light text-muted">
             {details.result}
           </p>
-        </div>
+        </Card>
       </div>
     </div>
   );

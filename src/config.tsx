@@ -670,3 +670,36 @@ export const SERVICES: Service[] = [
     ],
   },
 ];
+
+type PricingCard = {
+  plan: string;
+  price: string;
+  description: string;
+  features: string[];
+  isPopular?: boolean;
+};
+
+export const PRICING_CARDS: PricingCard[] = [
+  {
+    plan: "Lite",
+    price: "$3900",
+    description:
+      "Affordable web design package with a custom design, CMS integration, and responsive design for small businesses and startups.",
+    features: ["Concept", "Strategy", "Webdesign", "Prototype"],
+  },
+  {
+    plan: "Premium",
+    price: "$6900",
+    description:
+      "Premium package with UX/UI design, interactive prototype, Framer development, and CMS integration for medium businesses.",
+    features: ["Concept", "Strategy", "Webdesign", "Development"],
+    isPopular: true,
+  },
+  {
+    plan: "Gold",
+    price: "$9900",
+    description:
+      "Elite web design package with SEO optimization, research, and SEO support for businesses looking to dominate their market.",
+    features: ["Webdesign", "Development", "Content", "SEO"],
+  },
+];

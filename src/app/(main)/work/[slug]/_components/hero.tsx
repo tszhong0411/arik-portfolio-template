@@ -20,28 +20,28 @@ export default function Hero({ slug }: HeroProps) {
   const { image, title, description, meta } = project;
 
   return (
-    <div className="flex flex-col items-center gap-16 pt-28 px-6 md:pt-32 md:px-10 md:gap-12 xl:pt-48 xl:px-12 xl:gap-16">
-      <div className="flex flex-col items-center gap-8 w-full md:gap-12">
-        <div className="flex flex-col items-center gap-3">
-          <h1 className="text-5xl font-light md:text-7xl xl:text-8xl">
-            {title}
-          </h1>
-          <p className="max-w-150 text-lg font-chillax font-light text-center md:text-xl">
-            {description}
-          </p>
+    <div className="pt-28 px-6 md:pt-32 md:px-10 xl:pt-48 xl:px-12">
+      <div className="max-w-350 mx-auto flex flex-col items-center gap-16 md:gap-12 xl:gap-16">
+        <div className="flex flex-col items-center w-full gap-8 md:gap-12">
+          <div className="flex flex-col items-center gap-2 font-light">
+            <h1 className="text-5xl md:text-7xl xl:text-8xl">{title}</h1>
+            <p className="max-w-150 text-lg font-chillax text-center md:text-xl">
+              {description}
+            </p>
+          </div>
+          <div className="flex flex-col w-full gap-4 md:flex-row">
+            {meta.map((meta) => (
+              <MetaCard key={meta.title} {...meta} />
+            ))}
+          </div>
+          <Link href="/services#webdesign">
+            <ButtonScroll>More details</ButtonScroll>
+          </Link>
         </div>
-        <div className="grid gap-4 w-full max-w-250 md:grid-cols-4">
-          {meta.map((meta) => (
-            <MetaCard key={meta.title} {...meta} />
-          ))}
+        <div className="relative border rounded-xs">
+          <Image src={image} alt={title} />
+          <Noise />
         </div>
-        <Link href="/services#webdesign">
-          <ButtonScroll>More details</ButtonScroll>
-        </Link>
-      </div>
-      <div className="relative border rounded-xs">
-        <Image src={image} alt={title} />
-        <Noise />
       </div>
     </div>
   );
@@ -49,7 +49,7 @@ export default function Hero({ slug }: HeroProps) {
 
 function MetaCard({ title, content }: Project["meta"][0]) {
   return (
-    <Card className="flex flex-col items-center gap-2 p-4 uppercase text-sm tracking-widest">
+    <Card className="flex flex-1 flex-col items-center gap-2 p-4 uppercase text-sm tracking-widest">
       <p className="text-muted">{title}</p>
       {content.href ? (
         <Link href={content.href}>{content.label}</Link>

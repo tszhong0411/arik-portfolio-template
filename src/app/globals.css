@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -64,5 +65,11 @@
     to {
       transform: translateY(calc(-100% - var(--gap)));
     }
+  }
+}
+
+.prose {
+  li::marker {
+    @apply text-muted;
   }
 }

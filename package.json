@@ -14,6 +14,7 @@
     "clsx": "^2.1.1",
     "cva": "^1.0.0-beta.3",
     "lucide-react": "^0.475.0",
+    "markdown-to-jsx": "^7.7.3",
     "motion": "^12.4.2",
     "next": "15.1.6",
     "react": "^19.0.0",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@tailwindcss/postcss": "^4.0.6",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.13.1",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",

@@ -68,7 +68,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </Card>
-            <SocialCards />
+            <SocialCards all />
             <Card className="flex flex-col gap-8 p-8 md:p-10 xl:p-12">
               <p className="text-sm text-muted uppercase tracking-wider">
                 Awards

@@ -1,4 +1,5 @@
 import Noise from "@/components/noise";
+import SlideAnimation from "@/components/slide-animation";
 import ButtonScroll from "@/components/ui/button-scroll";
 import Card from "@/components/ui/card";
 import { Project, PROJECTS } from "@/config";
@@ -22,7 +23,7 @@ export default function Hero({ slug }: HeroProps) {
   return (
     <div className="pt-28 px-6 md:pt-32 md:px-10 xl:pt-48 xl:px-12">
       <div className="max-w-350 mx-auto flex flex-col items-center gap-16 md:gap-12 xl:gap-16">
-        <div className="flex flex-col items-center w-full gap-8 md:gap-12">
+        <SlideAnimation className="flex flex-col items-center w-full gap-8 md:gap-12">
           <div className="flex flex-col items-center gap-2 font-light">
             <h1 className="text-5xl md:text-7xl xl:text-8xl">{title}</h1>
             <p className="max-w-150 text-lg font-chillax text-center md:text-xl">
@@ -37,11 +38,11 @@ export default function Hero({ slug }: HeroProps) {
           <Link href="/services#webdesign">
             <ButtonScroll>More details</ButtonScroll>
           </Link>
-        </div>
-        <div className="relative border rounded-xs overflow-hidden">
+        </SlideAnimation>
+        <SlideAnimation className="relative border rounded-xs overflow-hidden">
           <Image src={image} alt={title} />
           <Noise />
-        </div>
+        </SlideAnimation>
       </div>
     </div>
   );

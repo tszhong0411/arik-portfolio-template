@@ -711,7 +711,13 @@ export const PRICING_CARDS: PricingCard[] = [
   },
 ];
 
-export const CONTACT_CARDS = [
+type SocailCard = {
+  title: string;
+  icon: IconType;
+  href: string;
+};
+
+export const SOCIAL_CARDS: SocailCard[] = [
   {
     title: "Instagram",
     icon: FaInstagram,
@@ -742,4 +748,18 @@ export const CONTACT_CARDS = [
     icon: FaPinterest,
     href: "https://www.pinterest.de/gola_design/",
   },
+];
+
+type Award = {
+  year: string;
+  title: string;
+};
+
+export const AWARDS: Award[] = [
+  { year: "2023", title: "Awwwards SOTD" },
+  { year: "2023", title: "CSSDA SOTD" },
+  { year: "2023", title: "Awwwards Website of the Month" },
+  { year: "2022", title: "CSSDA SOTD" },
+  { year: "2022", title: "Awwwards SOTD" },
+  { year: "2021", title: "Awwwards Website of the Year" },
 ];

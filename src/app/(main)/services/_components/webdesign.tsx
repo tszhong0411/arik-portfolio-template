@@ -19,7 +19,7 @@ export default function Webdesign() {
               </p>
               <h2 className="text-4xl font-light">{service.title}</h2>
             </div>
-            <div className="relative border rounded-xs">
+            <div className="relative border rounded-xs overflow-hidden">
               <Image src={service.image} alt={service.title} />
               <div className="bg-noise bg-repeat bg-[length:128px] absolute inset-0 z-10 opacity-10" />
             </div>

@@ -8,6 +8,12 @@ import catharine from "~/images/catharine-davis.png";
 import josh from "~/images/josh-kim.png";
 import andreas from "~/images/andreas-thompson.png";
 import liam from "~/images/liam-chen.png";
+import blogPost1 from "~/images/blog-post-1.png";
+import blogPost2 from "~/images/blog-post-2.png";
+import blogPost3 from "~/images/blog-post-3.png";
+import blogPost4 from "~/images/blog-post-4.png";
+import blogPost5 from "~/images/blog-post-5.png";
+import blogPost6 from "~/images/blog-post-6.png";
 
 import { StaticImageData } from "next/image";
 import {
@@ -762,4 +768,79 @@ export const AWARDS: Award[] = [
   { year: "2022", title: "CSSDA SOTD" },
   { year: "2022", title: "Awwwards SOTD" },
   { year: "2021", title: "Awwwards Website of the Year" },
+];
+
+type BlogPost = {
+  title: string;
+  slug: string;
+  image: StaticImageData;
+  date: string;
+  readingTime: string;
+  category: string;
+  excerpt: string;
+  // content: string;
+  // conclusion: string;
+};
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    title: "How to Build a Stunning Website with Next.js",
+    slug: "how-to-build-a-stunning-website-with-next-js",
+    image: blogPost1,
+    date: "Jul 29, 2024",
+    readingTime: "2 Min",
+    category: "Branding",
+    excerpt:
+      "Learn how to create an impressive website using Next.js with our step-by-step guide.",
+  },
+  {
+    title: "10 website elements for maximum user engagement",
+    slug: "10-website-elements-for-maximum-user-engagement",
+    image: blogPost2,
+    date: "Jul 25, 2024",
+    readingTime: "2 Min",
+    category: "Web Design",
+    excerpt:
+      "10 website elements to engage users, from intuitive navigation to compelling visuals.",
+  },
+  {
+    title: "The importance of content in driving website traffic",
+    slug: "the-importance-of-content-in-driving-website-traffic",
+    image: blogPost3,
+    date: "Jul 13, 2024",
+    readingTime: "2 Min",
+    category: "Branding",
+    excerpt:
+      "Quality content is king. Learn how to create valuable, SEO-optimized content.",
+  },
+  {
+    title: "10 common web development mistakes to avoid",
+    slug: "10-common-web-development-mistakes-to-avoid",
+    image: blogPost4,
+    date: "Jul 1, 2024",
+    readingTime: "2 Min",
+    category: "Web Design",
+    excerpt:
+      "10 common web development mistakes and improve your site's functionality and user experience.",
+  },
+  {
+    title: "Why responsive web design is critical for your business",
+    slug: "why-responsive-web-design-is-critical-for-your-business",
+    image: blogPost5,
+    date: "June 11, 2024",
+    readingTime: "2 Min",
+    category: "Branding",
+    excerpt:
+      "Responsive web design ensures your site looks great and performs well on all devices.",
+  },
+  {
+    title: "How to write content that ranks on Google",
+    slug: "how-to-write-content-that-ranks-on-google",
+    image: blogPost6,
+    date: "June 20, 2024",
+    readingTime: "2 Min",
+    category: "Web Design",
+    excerpt:
+      "Optimize your website with expert tips on writing content that ranks high on Google.",
+  },
 ];

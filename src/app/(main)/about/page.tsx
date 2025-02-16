@@ -62,7 +62,7 @@ export default function AboutPage() {
                   ability to deliver exceptional results that exceed my
                   clients&apos; expectations.
                 </p>
-                <div className="relative border rounded-xs">
+                <div className="relative border rounded-xs overflow-hidden">
                   <Image src={arikFull} alt="Arik Andersson" />
                   <Noise />
                 </div>

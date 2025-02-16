@@ -38,7 +38,7 @@ export default function Hero({ slug }: HeroProps) {
             <ButtonScroll>More details</ButtonScroll>
           </Link>
         </div>
-        <div className="relative border rounded-xs">
+        <div className="relative border rounded-xs overflow-hidden">
           <Image src={image} alt={title} />
           <Noise />
         </div>

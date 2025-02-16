@@ -34,7 +34,6 @@ function ServiceCard({ number, title, description, link }: ServiceCardProps) {
         </div>
       </div>
       <div className="w-max">
-        {/* <ButtonLink href={link.href} label={link.label} /> */}
         <ButtonText icon={<ArrowUpRightIcon className="size-4" />} asChild>
           <Link href={link.href}>{link.label}</Link>
         </ButtonText>

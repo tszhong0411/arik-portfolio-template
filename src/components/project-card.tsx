@@ -15,7 +15,10 @@ export default function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <Link href={`/work/${slug}`} className="relative border rounded-xs group">
+    <Link
+      href={`/work/${slug}`}
+      className="relative border rounded-xs group overflow-hidden"
+    >
       <div
         className={cn(
           buttonTextIconVariants(),
@@ -30,7 +33,7 @@ export default function ProjectCard({
         <div className="backdrop-blur-[15px] bg-muted border py-2 px-4 rounded-xs flex justify-between items-center">
           <h3 className="text-xl md:text-2xl font-light">{title}</h3>
           <p className="text-xs md:text-sm uppercase tracking-wider">
-            {meta.find((m) => m.title === "category")?.content.label}
+            {meta.find((m) => m.title === "Category")?.content.label}
           </p>
         </div>
       </div>

@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <footer className="bg-muted py-12 px-6 md:py-16 md:px-10 xl:py-24 xl:px-12 flex flex-col gap-16">
       <div className="grid gap-12 md:gap-16 md:grid-cols-2 xl:grid-cols-4">
-        <div className="flex flex-col items-center md:items-start gap-12 md:gap-8">
+        <div className="flex flex-col items-center gap-12 md:items-start md:gap-8 md:justify-between">
           <Logo />
           <div className="space-y-4">
             {SOCIAL_LINKS.map((link) => (
@@ -102,7 +102,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-4 md:items-start">
         <div className="text-sm font-chillax font-light">
           © Design by{" "}
           <a

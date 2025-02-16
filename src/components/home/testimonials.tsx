@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { type Testimonial, TESTIMONIALS } from "@/config";
 import Card from "../ui/card";
-import { motion } from "motion/react";
 import SlideAnimation from "../slide-animation";
 
 export default function Testimonials() {

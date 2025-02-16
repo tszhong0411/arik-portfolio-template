@@ -1,6 +1,7 @@
 import { SOCIAL_CARDS } from "@/config";
 import Card from "./ui/card";
 import { ArrowRightIcon } from "lucide-react";
+import SlideAnimation from "./slide-animation";
 
 type SocialCardsProps = {
   all?: boolean;
@@ -8,7 +9,7 @@ type SocialCardsProps = {
 
 export default function SocialCards({ all = false }: SocialCardsProps) {
   return (
-    <div className="grid md:grid-cols-3 gap-4">
+    <SlideAnimation className="grid md:grid-cols-3 gap-4">
       {SOCIAL_CARDS.filter((card) => (all ? true : card.selected)).map(
         (card) => (
           <Card
@@ -23,6 +24,6 @@ export default function SocialCards({ all = false }: SocialCardsProps) {
           </Card>
         )
       )}
-    </div>
+    </SlideAnimation>
   );
 }

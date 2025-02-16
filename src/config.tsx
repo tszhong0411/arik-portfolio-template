@@ -1039,3 +1039,80 @@ export const AWARDS: Award[] = [
   { year: "2022", title: "Awwwards SOTD" },
   { year: "2021", title: "Awwwards Website of the Year" },
 ];
+
+type Licensing = {
+  title: string;
+  sections: {
+    title: string;
+    links: BaseLink[];
+  }[];
+};
+
+export const LICENSING: Licensing[] = [
+  {
+    title: "Images",
+    sections: [
+      {
+        title: "Unsplash",
+        links: [
+          {
+            label: "Image collection",
+            href: "https://unsplash.com/collections/iSPbE51qaJg/arik---framer-template",
+          },
+          {
+            label: "license",
+            href: "https://unsplash.com/plus/license",
+          },
+        ],
+      },
+      {
+        title: "LS.Graphics",
+        links: [
+          {
+            label: "iPhone mockups",
+            href: "https://www.ls.graphics/products/a-mockups-iphone-14-pro",
+          },
+          {
+            label: "Macbook mockups",
+            href: "https://www.ls.graphics/products/b-mockups-macbook-16-pro",
+          },
+          {
+            label: "License",
+            href: "https://www.ls.graphics/license",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Fonts",
+    sections: [
+      {
+        title: "Satoshi",
+        links: [
+          {
+            label: "Source",
+            href: "https://www.fontshare.com/fonts/satoshi",
+          },
+          {
+            label: "License",
+            href: "https://www.fontshare.com/licenses/itf-ffl",
+          },
+        ],
+      },
+      {
+        title: "Gambetta",
+        links: [
+          {
+            label: "Source",
+            href: "https://www.fontshare.com/fonts/gambetta",
+          },
+          {
+            label: "License",
+            href: "https://www.fontshare.com/licenses/itf-ffl",
+          },
+        ],
+      },
+    ],
+  },
+];

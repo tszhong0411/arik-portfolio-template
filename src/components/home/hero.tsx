@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="text-center text-6xl sm:text-7xl xl:text-9xl">
             <p className="font-light">Web Designer</p>
-            <p className="font-gambetta font-light">& Developer</p>
+            <p className="font-gambetta font-light italic">& Developer</p>
           </div>
           <p className="max-w-150 text-center font-chillax text-lg md:text-2xl xl:text-lg">
             Premium Web Design, Development, and SEO services to help your

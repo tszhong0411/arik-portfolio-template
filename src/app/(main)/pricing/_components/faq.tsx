@@ -1,3 +1,4 @@
+import SlideAnimation from "@/components/slide-animation";
 import {
   Accordion,
   AccordionContent,
@@ -9,12 +10,16 @@ export default function FAQ() {
     <div className="flex flex-col gap-16 px-6 py-16 md:px-10 md:py-24 xl:px-12 xl:pt-32 xl:pb-40">
       <div className="max-w-350 mx-auto flex flex-col gap-8 w-full md:gap-12 md:flex-row">
         <div className="flex flex-col items-center gap-2 flex-1 md:items-start">
-          <p className="text-sm text-muted">FAQ</p>
-          <h2 className="text-4xl font-gambetta font-light italic md:text-5xl xl:text-6xl">
-            Common Questions
-          </h2>
+          <SlideAnimation direction="down" asChild>
+            <p className="text-sm text-muted">FAQ</p>
+          </SlideAnimation>
+          <SlideAnimation asChild>
+            <h2 className="text-4xl font-gambetta font-light italic md:text-5xl xl:text-6xl">
+              Common Questions
+            </h2>
+          </SlideAnimation>
         </div>
-        <div className="flex flex-col gap-4 flex-1">
+        <SlideAnimation className="flex flex-col gap-4 flex-1">
           <Accordion>
             <AccordionTrigger>
               What is the typical turnaround time for a website project?
@@ -63,7 +68,7 @@ export default function FAQ() {
               and testing before launching the website.
             </AccordionContent>
           </Accordion>
-        </div>
+        </SlideAnimation>
       </div>
     </div>
   );

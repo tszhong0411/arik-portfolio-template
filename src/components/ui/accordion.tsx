@@ -3,6 +3,7 @@
 import { cn } from "@/utils/cn";
 import { PlusIcon } from "lucide-react";
 import { createContext, useContext, useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 type Context = {
   isOpen: boolean;
@@ -35,7 +36,7 @@ function Accordion({ children, className }: AccordionProps) {
       <div
         onClick={toggleAccordion}
         className={cn(
-          "border bg-muted rounded-xs p-6 flex flex-col gap-4 hover:bg-muted-hover hover:border-border-hover transition-colors duration-300 xl:p-8",
+          "border bg-muted rounded-xs p-6 flex flex-col hover:bg-muted-hover hover:border-border-hover transition-colors duration-300 xl:p-8",
           className
         )}
       >
@@ -70,10 +71,29 @@ type AccordionContentProps = React.ComponentProps<"div">;
 function AccordionContent({ children, className }: AccordionContentProps) {
   const { isOpen } = useAccordion();
 
-  if (!isOpen) return null;
-
   return (
-    <div className={cn("font-chillax font-light", className)}>{children}</div>
+    <AnimatePresence mode="wait">
+      {isOpen && (
+        <motion.div
+          initial={{ height: 0, marginTop: 0 }}
+          animate={{ height: "auto", marginTop: 16 }}
+          exit={{ height: 0, marginTop: 0 }}
+          transition={{
+            duration: 0.2,
+            ease: [0.32, 0.72, 0, 1], // Custom easing for more natural motion
+          }}
+          className={cn("font-chillax font-light overflow-hidden", className)}
+        >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.15, delay: 0.1 }}
+          >
+            {children}
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
 

@@ -33,7 +33,7 @@ export default function Marquee({
       className={cn(
         "group flex gap-4 overflow-hidden",
         direction === "left" ? "flex-row" : "flex-col",
-        className
+        className,
       )}
       style={{
         maskImage: fade
@@ -55,13 +55,13 @@ export default function Marquee({
           <div
             key={i}
             className={cn(
-              "flex justify-around gap-4 [--gap:16px] shrink-0",
+              "flex shrink-0 justify-around gap-4 [--gap:16px]",
               direction === "left"
                 ? "animate-marquee-left flex-row"
                 : "animate-marquee-up flex-col",
               pauseOnHover && "group-hover:[animation-play-state:paused]",
               reverse && "direction-reverse",
-              innerClassName
+              innerClassName,
             )}
           >
             {children}

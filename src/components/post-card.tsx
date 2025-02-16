@@ -23,8 +23,8 @@ export default function PostCard({
   return (
     <SlideAnimation asChild>
       <Link key={slug} href={`/blog/${slug}`}>
-        <Card className="flex flex-col gap-8 p-8 hover:bg-muted-hover hover:border-border-hover transition-colors duration-300 group md:p-10">
-          <div className="relative border rounded-xs overflow-hidden">
+        <Card className="group flex flex-col gap-8 p-8 transition-colors duration-300 hover:border-border-hover hover:bg-muted-hover md:p-10">
+          <div className="relative overflow-hidden rounded-xs border">
             <AspectRatio ratio={16 / 9}>
               <Image
                 src={image}
@@ -36,7 +36,7 @@ export default function PostCard({
               <div
                 className={cn(
                   buttonTextIconVariants(),
-                  "size-10 opacity-0 transition-all group-hover:opacity-100 group-hover:-rotate-45 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+                  "absolute top-1/2 left-1/2 z-20 size-10 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-all group-hover:-rotate-45 group-hover:opacity-100",
                 )}
               >
                 <ArrowRightIcon className="size-5" />
@@ -44,7 +44,7 @@ export default function PostCard({
             </AspectRatio>
           </div>
           <div className="flex flex-col gap-2">
-            <p className="text-sm text-muted uppercase tracking-wider">
+            <p className="text-sm tracking-wider text-muted uppercase">
               {date}
             </p>
             <h2 className="text-2xl font-light">{title}</h2>

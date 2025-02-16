@@ -21,13 +21,13 @@ export default function Hero({ slug }: HeroProps) {
   const { title, excerpt, date, category, readingTime, image } = post;
 
   return (
-    <div className="flex flex-col gap-8 pt-28 px-6 md:gap-12 md:pt-35 md:px-10 xl:gap-16 xl:pt-48 xl:px-12">
-      <SlideAnimation className="max-w-250 mx-auto flex flex-col items-center gap-12">
+    <div className="flex flex-col gap-8 px-6 pt-28 md:gap-12 md:px-10 md:pt-35 xl:gap-16 xl:px-12 xl:pt-48">
+      <SlideAnimation className="mx-auto flex max-w-250 flex-col items-center gap-12">
         <div className="flex flex-col items-center gap-3 text-center">
           <h1 className="text-4xl font-light md:text-5xl xl:text-6xl">
             {title}
           </h1>
-          <p className="max-w-150 text-lg font-chillax font-light md:text-xl">
+          <p className="max-w-150 font-chillax text-lg font-light md:text-xl">
             {excerpt}
           </p>
         </div>
@@ -35,13 +35,13 @@ export default function Hero({ slug }: HeroProps) {
           <ButtonScroll>Read More</ButtonScroll>
         </Link>
       </SlideAnimation>
-      <div className="max-w-350 mx-auto flex flex-col gap-4 w-full">
-        <SlideAnimation className="flex flex-col gap-4 w-full md:flex-row">
+      <div className="mx-auto flex w-full max-w-350 flex-col gap-4">
+        <SlideAnimation className="flex w-full flex-col gap-4 md:flex-row">
           <MetaCard title="Date" content={date} />
           <MetaCard title="Category" content={category} />
           <MetaCard title="Reading Time" content={readingTime} />
         </SlideAnimation>
-        <SlideAnimation className="relative border rounded-xs overflow-hidden">
+        <SlideAnimation className="relative overflow-hidden rounded-xs border">
           <Image src={image} alt={title} />
           <Noise />
         </SlideAnimation>
@@ -57,7 +57,7 @@ type MetaCardProps = {
 
 function MetaCard({ title, content }: MetaCardProps) {
   return (
-    <Card className="p-6 flex flex-1 justify-between items-center text-sm uppercase tracking-wider">
+    <Card className="flex flex-1 items-center justify-between p-6 text-sm tracking-wider uppercase">
       <p className="text-muted">{title}</p>
       <p>{content}</p>
     </Card>

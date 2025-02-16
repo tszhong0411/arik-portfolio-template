@@ -10,19 +10,19 @@ import { buttonVariants } from "./ui/button";
 
 export default function Header() {
   return (
-    <div className="pt-4 px-6 md:pt-6 md:px-8 xl:pt-8 xl:px-10 flex justify-center fixed top-0 w-full z-50">
-      <header className="py-2.5 pr-3 pl-5 border flex justify-between items-center w-full md:w-auto gap-8 bg-muted relative backdrop-blur-[30px]">
+    <div className="fixed top-0 z-50 flex w-full justify-center px-6 pt-4 md:px-8 md:pt-6 xl:px-10 xl:pt-8">
+      <header className="relative flex w-full items-center justify-between gap-8 border bg-muted py-2.5 pr-3 pl-5 backdrop-blur-[30px] md:w-auto">
         <Link href="/">
           <Logo />
         </Link>
-        <div className="flex justify-between items-center gap-3 md:gap-6">
-          <nav className="md:flex items-center gap-5 hidden">
+        <div className="flex items-center justify-between gap-3 md:gap-6">
+          <nav className="hidden items-center gap-5 md:flex">
             {NAV_LINKS.filter((link) => !link.mobileOnly).map(
               ({ label, href }) => (
                 <NavItem key={href} href={href}>
                   {label}
                 </NavItem>
-              )
+              ),
             )}
           </nav>
           <LetsTalkLink />
@@ -47,7 +47,7 @@ function MenuIcon() {
   return (
     <>
       <motion.button
-        className="w-10 h-7.5 flex flex-col gap-2 md:hidden relative"
+        className="relative flex h-7.5 w-10 flex-col gap-2 md:hidden"
         type="button"
         aria-label="Open Menu"
         onClick={() => setIsOpen((prev) => !prev)}
@@ -55,7 +55,7 @@ function MenuIcon() {
         animate={isOpen ? "open" : "closed"}
       >
         <motion.div
-          className="bg-primary w-7.5 h-px absolute top-1/4 inset-x-1.25 origin-right"
+          className="absolute inset-x-1.25 top-1/4 h-px w-7.5 origin-right bg-primary"
           variants={{
             open: { rotate: "-30deg" },
           }}
@@ -64,7 +64,7 @@ function MenuIcon() {
           }}
         />
         <motion.div
-          className="bg-primary w-7.5 h-px absolute top-1/2 inset-x-1.25 origin-center"
+          className="absolute inset-x-1.25 top-1/2 h-px w-7.5 origin-center bg-primary"
           variants={{
             open: { opacity: 0, scaleX: 0.4 },
             closed: { opacity: 1, scaleX: 1 },
@@ -74,7 +74,7 @@ function MenuIcon() {
           }}
         />
         <motion.div
-          className="bg-primary w-7.5 h-px absolute top-3/4 inset-x-1.25 origin-right"
+          className="absolute inset-x-1.25 top-3/4 h-px w-7.5 origin-right bg-primary"
           variants={{
             open: { rotate: "30deg" },
           }}
@@ -84,13 +84,13 @@ function MenuIcon() {
         />
       </motion.button>
       {isOpen && (
-        <nav className="absolute top-17.5 inset-x-0 border p-6 flex flex-col gap-6 bg-[#181716]">
-          <div className="flex flex-col gap-5 items-center">
+        <nav className="absolute inset-x-0 top-17.5 flex flex-col gap-6 border bg-[#181716] p-6">
+          <div className="flex flex-col items-center gap-5">
             {NAV_LINKS.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
-                className="uppercase text-sm tracking-wider"
+                className="text-sm tracking-wider uppercase"
                 onClick={() => setIsOpen(false)}
               >
                 {label}

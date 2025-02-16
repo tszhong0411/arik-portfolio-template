@@ -11,8 +11,8 @@ export default function ToTop({ href, className, ...rest }: ToTopProps) {
       className={cn("flex items-center gap-4", className)}
       {...rest}
     >
-      <div className="text-sm uppercase tracking-wider">To top</div>
-      <div className="size-10 rounded-full border bg-muted hover:bg-muted-hover transition-colors duration-300 flex justify-center items-center">
+      <div className="text-sm tracking-wider uppercase">To top</div>
+      <div className="flex size-10 items-center justify-center rounded-full border bg-muted transition-colors duration-300 hover:bg-muted-hover">
         <ArrowUpIcon className="size-4.5" />
       </div>
     </Link>

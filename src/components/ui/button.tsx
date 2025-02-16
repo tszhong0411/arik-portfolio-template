@@ -3,11 +3,11 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "cva";
 
 export const buttonVariants = cva({
-  base: "rounded-xs px-4 py-2.5 text-xs tracking-wider transition-colors duration-300 flex items-center justify-center gap-2 uppercase",
+  base: "flex items-center justify-center gap-2 rounded-xs px-4 py-2.5 text-xs tracking-wider uppercase transition-colors duration-300",
   variants: {
     variant: {
-      default: "bg-muted hover:bg-muted-hover border hover:border-border-hover",
-      primary: "bg-primary hover:bg-primary-hover text-inverse",
+      default: "border bg-muted hover:border-border-hover hover:bg-muted-hover",
+      primary: "bg-primary text-inverse hover:bg-primary-hover",
       secondary: "bg-secondary hover:bg-secondary-hover",
     },
   },

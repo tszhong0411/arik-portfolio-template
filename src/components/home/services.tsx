@@ -9,7 +9,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="pt-12 px-6 flex flex-col gap-4 max-w-350 mx-auto xl:flex-row xl:gap-8 md:px-10 xl:px-12 md:pt-16 xl:pt-20"
+      className="mx-auto flex max-w-350 flex-col gap-4 px-6 pt-12 md:px-10 md:pt-16 xl:flex-row xl:gap-8 xl:px-12 xl:pt-20"
     >
       {SERVICE_CARDS.map((card) => (
         <ServiceCard key={card.number} {...card} />
@@ -23,15 +23,15 @@ type ServiceCardProps = ServiceCard;
 function ServiceCard({ number, title, description, link }: ServiceCardProps) {
   return (
     <SlideAnimation asChild>
-      <Card className="p-8 md:p-10 xl:p-12 flex flex-col justify-between gap-8 flex-1">
+      <Card className="flex flex-1 flex-col justify-between gap-8 p-8 md:p-10 xl:p-12">
         <div className="space-y-2">
           <div className="space-y-1">
-            <div className="text-muted text-sm">{number}</div>
-            <h4 className="text-xl md:text-2xl uppercase font-light tracking-wider">
+            <div className="text-sm text-muted">{number}</div>
+            <h4 className="text-xl font-light tracking-wider uppercase md:text-2xl">
               {title}
             </h4>
           </div>
-          <div className="text-sm md:text-base font-chillax font-light">
+          <div className="font-chillax text-sm font-light md:text-base">
             {description}
           </div>
         </div>

@@ -9,15 +9,15 @@ type ButtonTextProps = {
   VariantProps<typeof buttonTextIconVariants>;
 
 export const buttonTextVariants = cva({
-  base: "inline-flex justify-center items-center gap-3 uppercase group text-sm tracking-wider",
+  base: "group inline-flex items-center justify-center gap-3 text-sm tracking-wider uppercase",
 });
 
 export const buttonTextIconVariants = cva({
-  base: "size-8 rounded-full flex justify-center items-center transition-all duration-300 group-hover:rotate-45",
+  base: "flex size-8 items-center justify-center rounded-full transition-all duration-300 group-hover:rotate-45",
   variants: {
     variant: {
       default:
-        "bg-muted border group-hover:border-border-hover group-hover:bg-muted-hover",
+        "border bg-muted group-hover:border-border-hover group-hover:bg-muted-hover",
       primary: "bg-primary text-inverse group-hover:bg-primary-hover",
       secondary: "bg-secondary group-hover:bg-secondary-hover",
     },

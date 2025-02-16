@@ -6,10 +6,10 @@ export default function NavItem({ href, children }: NavItemProps) {
   return (
     <Link
       href={href}
-      className="uppercase tracking-wider text-default text-sm relative group"
+      className="group relative text-sm tracking-wider text-default uppercase"
     >
       {children}
-      <div className="absolute inset-x-0 -bottom-1 w-0 h-px group-hover:w-full transition-[width] bg-primary duration-300 ease-out" />
+      <div className="absolute inset-x-0 -bottom-1 h-px w-0 bg-primary transition-[width] duration-300 ease-out group-hover:w-full" />
     </Link>
   );
 }

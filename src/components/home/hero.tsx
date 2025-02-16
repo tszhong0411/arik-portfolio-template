@@ -6,19 +6,19 @@ import SlideAnimation from "../slide-animation";
 
 export default function Hero() {
   return (
-    <section className="pt-12 px-6 md:px-10 xl:px-12 flex flex-col justify-center items-center">
+    <section className="flex flex-col items-center justify-center px-6 pt-12 md:px-10 xl:px-12">
       <Image
         className="w-60 md:w-100 xl:w-125"
         src={heroImage}
         alt="Hero image"
       />
       <SlideAnimation className="space-y-12">
-        <div className="flex flex-col justify-center items-center gap-4">
+        <div className="flex flex-col items-center justify-center gap-4">
           <div className="text-center text-6xl sm:text-7xl xl:text-9xl">
             <p className="font-light">Web Designer</p>
-            <p className="font-light font-gambetta">& Developer</p>
+            <p className="font-gambetta font-light">& Developer</p>
           </div>
-          <p className="font-chillax text-lg md:text-2xl xl:text-lg text-center max-w-150">
+          <p className="max-w-150 text-center font-chillax text-lg md:text-2xl xl:text-lg">
             Premium Web Design, Development, and SEO services to help your
             business stand out.
           </p>

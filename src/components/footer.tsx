@@ -19,9 +19,9 @@ export default function Footer() {
   const pathname = usePathname();
 
   return (
-    <footer className="bg-muted py-12 px-6 md:py-16 md:px-10 xl:py-24 xl:px-12 flex flex-col gap-16">
-      <div className="grid gap-12 md:gap-16 md:grid-cols-2 xl:grid-cols-4">
-        <div className="flex flex-col items-center gap-12 md:items-start md:gap-8 md:justify-between">
+    <footer className="flex flex-col gap-16 bg-muted px-6 py-12 md:px-10 md:py-16 xl:px-12 xl:py-24">
+      <div className="grid gap-12 md:grid-cols-2 md:gap-16 xl:grid-cols-4">
+        <div className="flex flex-col items-center gap-12 md:items-start md:justify-between md:gap-8">
           <Logo />
           <div className="space-y-4">
             {SOCIAL_LINKS.map((link) => (
@@ -40,16 +40,16 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-center md:items-start gap-8">
+        <div className="flex flex-col items-center gap-8 md:items-start">
           <p className="text-xl font-light">Pages</p>
-          <div className="flex flex-col items-center md:items-start gap-6">
+          <div className="flex flex-col items-center gap-6 md:items-start">
             {PAGE_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 className={cn(
-                  "text-sm text-muted uppercase tracking-wider",
-                  pathname === link.href && "text-default"
+                  "text-sm tracking-wider text-muted uppercase",
+                  pathname === link.href && "text-default",
                 )}
               >
                 {link.label}
@@ -63,20 +63,20 @@ export default function Footer() {
               rel="noopener"
             >
               More templates{" "}
-              <ArrowUpRightIcon className="size-4 group-hover:rotate-45 transition-transform duration-300" />
+              <ArrowUpRightIcon className="size-4 transition-transform duration-300 group-hover:rotate-45" />
             </a>
           </Button>
         </div>
-        <div className="flex flex-col items-center md:items-start gap-8">
+        <div className="flex flex-col items-center gap-8 md:items-start">
           <p className="text-xl font-light">CMS</p>
-          <div className="flex flex-col items-center md:items-start gap-6">
+          <div className="flex flex-col items-center gap-6 md:items-start">
             {CMS_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 className={cn(
-                  "text-sm text-muted uppercase tracking-wider",
-                  pathname === link.href && "text-default"
+                  "text-sm tracking-wider text-muted uppercase",
+                  pathname === link.href && "text-default",
                 )}
               >
                 {link.label}
@@ -84,16 +84,16 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-center md:items-start gap-8">
+        <div className="flex flex-col items-center gap-8 md:items-start">
           <p className="text-xl font-light">Utility Pages</p>
-          <div className="flex flex-col items-center md:items-start gap-6">
+          <div className="flex flex-col items-center gap-6 md:items-start">
             {UTILITY_PAGE_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 className={cn(
-                  "text-sm text-muted uppercase tracking-wider",
-                  pathname === link.href && "text-default"
+                  "text-sm tracking-wider text-muted uppercase",
+                  pathname === link.href && "text-default",
                 )}
               >
                 {link.label}
@@ -103,7 +103,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex flex-col items-center gap-4 md:items-start">
-        <div className="text-sm font-chillax font-light">
+        <div className="font-chillax text-sm font-light">
           © Design by{" "}
           <a
             href="https://templates.gola.io/template/arik"

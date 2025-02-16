@@ -36,8 +36,8 @@ function Accordion({ children, className }: AccordionProps) {
       <div
         onClick={toggleAccordion}
         className={cn(
-          "border bg-muted rounded-xs p-6 flex flex-col hover:bg-muted-hover hover:border-border-hover transition-colors duration-300 xl:p-8",
-          className
+          "flex flex-col rounded-xs border bg-muted p-6 transition-colors duration-300 hover:border-border-hover hover:bg-muted-hover xl:p-8",
+          className,
         )}
       >
         {children}
@@ -52,12 +52,12 @@ function AccordionTrigger({ children, className }: AccordionTriggerProps) {
   const { isOpen } = useAccordion();
 
   return (
-    <div className={cn("w-full flex items-center gap-2", className)}>
-      <span className="text-lg font-light flex-1">{children}</span>
+    <div className={cn("flex w-full items-center gap-2", className)}>
+      <span className="flex-1 text-lg font-light">{children}</span>
       <div
         className={cn(
-          "size-10 transform transition-transform duration-300 border bg-muted rounded-full flex justify-center items-center",
-          isOpen && "rotate-135"
+          "flex size-10 transform items-center justify-center rounded-full border bg-muted transition-transform duration-300",
+          isOpen && "rotate-135",
         )}
       >
         <PlusIcon className="size-5" />
@@ -82,7 +82,7 @@ function AccordionContent({ children, className }: AccordionContentProps) {
             duration: 0.2,
             ease: [0.32, 0.72, 0, 1], // Custom easing for more natural motion
           }}
-          className={cn("font-chillax font-light overflow-hidden", className)}
+          className={cn("overflow-hidden font-chillax font-light", className)}
         >
           <motion.div
             initial={{ opacity: 0 }}

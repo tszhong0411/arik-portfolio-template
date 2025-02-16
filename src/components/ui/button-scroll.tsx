@@ -12,8 +12,8 @@ export default function ButtonScroll({
   return (
     <button
       className={cn(
-        "uppercase flex justify-center items-center gap-4 group tracking-wider text-sm",
-        className
+        "group flex items-center justify-center gap-4 text-sm tracking-wider uppercase",
+        className,
       )}
       {...rest}
     >

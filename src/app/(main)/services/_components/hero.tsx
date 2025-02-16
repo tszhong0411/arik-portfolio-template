@@ -6,15 +6,15 @@ import SlideAnimation from "@/components/slide-animation";
 
 export default function Hero() {
   return (
-    <SlideAnimation className="pt-28 px-6 md:pt-32 md:px-10 xl:pt-48 xl:px-12">
-      <div className="max-w-350 mx-auto flex flex-col items-center gap-12">
+    <SlideAnimation className="px-6 pt-28 md:px-10 md:pt-32 xl:px-12 xl:pt-48">
+      <div className="mx-auto flex max-w-350 flex-col items-center gap-12">
         <div className="flex flex-col items-center gap-8 md:gap-12">
           <div className="space-y-3">
             <div className="flex flex-col items-center text-6xl font-light md:text-7xl xl:text-9xl">
               <p>Web Design</p>
               <p className="font-gambetta italic">& Next.js</p>
             </div>
-            <p className="text-lg font-chillax font-light text-center max-w-150 md:text-xl">
+            <p className="max-w-150 text-center font-chillax text-lg font-light md:text-xl">
               Premium Web Design, Development, and SEO services to help your
               business stand out.
             </p>

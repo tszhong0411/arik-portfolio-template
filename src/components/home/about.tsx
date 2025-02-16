@@ -16,10 +16,10 @@ export default function About() {
   });
 
   return (
-    <section className="py-16 flex flex-col justify-center items-center gap-8 md:gap-16 md:pb-24 xl:pt-24 xl:pb-40">
+    <section className="flex flex-col items-center justify-center gap-8 py-16 md:gap-16 md:pb-24 xl:pt-24 xl:pb-40">
       <div
         ref={ref}
-        className="flex flex-col justify-center items-center md:flex-row gap-4 md:gap-0 xl:gap-8 overflow-x-hidden"
+        className="flex flex-col items-center justify-center gap-4 overflow-x-hidden md:flex-row md:gap-0 xl:gap-8"
       >
         <Name position="left" scrollYProgress={scrollYProgress} />
         <Image
@@ -34,20 +34,20 @@ export default function About() {
         />
       </div>
       <div className="px-12">
-        <div className="grid gap-4 xl:gap-20 xl:grid-cols-2 xl:max-w-300">
-          <div className="text-3xl md:text-4xl font-light text-center xl:text-start">
+        <div className="grid gap-4 xl:max-w-300 xl:grid-cols-2 xl:gap-20">
+          <div className="text-center text-3xl font-light md:text-4xl xl:text-start">
             <h2>A website that leaves</h2>
             <h2 className="font-gambetta italic">a lasting impression!</h2>
           </div>
           <div className="space-y-8">
-            <p className="md:text-lg font-chillax font-light text-center xl:text-start">
+            <p className="text-center font-chillax font-light md:text-lg xl:text-start">
               Hi, I&apos;m Arik Andersson - a freelancer specializing in premium
               web design, development, and SEO services. I&apos;m passionate
               about creating unique and effective solutions for my clients, and
               I bring a personal touch to every project. Let&apos;s work
               together to bring your vision to life!
             </p>
-            <div className="flex justify-center items-center gap-2 xl:justify-start">
+            <div className="flex items-center justify-center gap-2 xl:justify-start">
               <div className={cn(buttonTextIconVariants(), "size-10")}>
                 <FaTwitter size={20} />
               </div>
@@ -77,7 +77,7 @@ function Name({ position, scrollYProgress, className, ...rest }: NameProps) {
   const x = useTransform(
     scrollYProgress,
     [0, 0.5],
-    [position === "left" ? -100 : 100, 0]
+    [position === "left" ? -100 : 100, 0],
   );
   const opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
 

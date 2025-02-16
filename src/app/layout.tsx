@@ -65,7 +65,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           satoshi.variable,
           gambetta.variable,
           chillax.variable,
-          "antialiased bg-default font-satoshi text-default scroll-smooth"
+          "scroll-smooth bg-default font-satoshi text-default antialiased",
         )}
       >
         <main id="main">{children}</main>

@@ -19,22 +19,22 @@ export default function ProjectCard({
     <SlideAnimation asChild>
       <Link
         href={`/work/${slug}`}
-        className="relative border rounded-xs group overflow-hidden"
+        className="group relative overflow-hidden rounded-xs border"
       >
         <div
           className={cn(
             buttonTextIconVariants(),
-            "size-10 opacity-0 transition-all group-hover:opacity-100 group-hover:-rotate-45 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+            "absolute top-1/2 left-1/2 z-20 size-10 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-all group-hover:-rotate-45 group-hover:opacity-100",
           )}
         >
           <ArrowRightIcon className="size-5" />
         </div>
         <Noise />
         <Image src={image} alt={title} className="absolute inset-0" />
-        <div className="p-4 md:p-6 absolute bottom-0 inset-x-0 z-20">
-          <div className="backdrop-blur-[15px] bg-muted border py-2 px-4 rounded-xs flex justify-between items-center">
-            <h3 className="text-xl md:text-2xl font-light">{title}</h3>
-            <p className="text-xs md:text-sm uppercase tracking-wider">
+        <div className="absolute inset-x-0 bottom-0 z-20 p-4 md:p-6">
+          <div className="flex items-center justify-between rounded-xs border bg-muted px-4 py-2 backdrop-blur-[15px]">
+            <h3 className="text-xl font-light md:text-2xl">{title}</h3>
+            <p className="text-xs tracking-wider uppercase md:text-sm">
               {meta.find((m) => m.title === "Category")?.content.label}
             </p>
           </div>

@@ -112,7 +112,7 @@ function Name({ position, scrollYProgress, className, ...rest }: NameProps) {
         className={cn("text-3xl font-light md:text-5xl xl:text-9xl", className)}
         {...rest}
       >
-        Arik <span className="font-gambetta font-light italic">Andersson</span>
+        Arik <span className="font-gambetta italic">Andersson</span>
       </p>
     </motion.div>
   );

@@ -5,8 +5,11 @@ import Image from "next/image";
 import { ArrowRightIcon } from "lucide-react";
 import { Project } from "@/config";
 import Noise from "./noise";
+import { motion } from "motion/react";
 
 type ProjectCardProps = Project;
+
+const MotionLink = motion.create(Link);
 
 export default function ProjectCard({
   title,
@@ -15,9 +18,18 @@ export default function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <Link
+    <MotionLink
       href={`/work/${slug}`}
       className="relative border rounded-xs group overflow-hidden"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 1,
+        ease: [0.5, 1, 0.89, 1],
+      }}
+      viewport={{
+        once: true,
+      }}
     >
       <div
         className={cn(
@@ -38,6 +50,6 @@ export default function ProjectCard({
         </div>
       </div>
       <div className="aspect-[1.33333] w-full" />
-    </Link>
+    </MotionLink>
   );
 }

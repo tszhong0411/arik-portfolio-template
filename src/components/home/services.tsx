@@ -1,8 +1,11 @@
+"use client";
+
 import { SERVICE_CARDS, type ServiceCard } from "@/config";
 import ButtonText from "../ui/button-text";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "lucide-react";
 import Card from "../ui/card";
+import { motion } from "motion/react";
 
 export default function Services() {
   return (
@@ -19,9 +22,22 @@ export default function Services() {
 
 type ServiceCardProps = ServiceCard;
 
+const MotionCard = motion.create(Card);
+
 function ServiceCard({ number, title, description, link }: ServiceCardProps) {
   return (
-    <Card className="p-8 md:p-10 xl:p-12 flex flex-col justify-between gap-8 flex-1">
+    <MotionCard
+      className="p-8 md:p-10 xl:p-12 flex flex-col justify-between gap-8 flex-1"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 1,
+        ease: [0.5, 1, 0.89, 1],
+      }}
+      viewport={{
+        once: true,
+      }}
+    >
       <div className="space-y-2">
         <div className="space-y-1">
           <div className="text-muted text-sm">{number}</div>
@@ -38,6 +54,6 @@ function ServiceCard({ number, title, description, link }: ServiceCardProps) {
           <Link href={link.href}>{link.label}</Link>
         </ButtonText>
       </div>
-    </Card>
+    </MotionCard>
   );
 }

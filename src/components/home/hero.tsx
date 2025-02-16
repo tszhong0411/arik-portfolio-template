@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import heroImage from "~/images/arik.png";
 import Link from "next/link";
 import ButtonScroll from "../ui/button-scroll";
+import { motion } from "motion/react";
 
 export default function Hero() {
   return (
@@ -11,7 +14,15 @@ export default function Hero() {
         src={heroImage}
         alt="Hero image"
       />
-      <div className="space-y-12">
+      <motion.div
+        className="space-y-12"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1,
+          ease: [0.5, 1, 0.89, 1],
+        }}
+      >
         <div className="flex flex-col justify-center items-center gap-4">
           <div className="text-center text-6xl sm:text-7xl xl:text-9xl">
             <p className="font-light">Web Designer</p>
@@ -27,7 +38,7 @@ export default function Hero() {
             <ButtonScroll>My services</ButtonScroll>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

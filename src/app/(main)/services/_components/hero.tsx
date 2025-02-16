@@ -1,11 +1,25 @@
+"use client";
+
 import Link from "next/link";
 import macbook from "~/images/macbook.png";
 import Image from "next/image";
 import ButtonScroll from "@/components/ui/button-scroll";
+import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <div className="pt-28 px-6 md:pt-32 md:px-10 xl:pt-48 xl:px-12">
+    <motion.div
+      className="pt-28 px-6 md:pt-32 md:px-10 xl:pt-48 xl:px-12"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 1,
+        ease: [0.5, 1, 0.89, 1],
+      }}
+      viewport={{
+        once: true,
+      }}
+    >
       <div className="max-w-350 mx-auto flex flex-col items-center gap-12">
         <div className="flex flex-col items-center gap-8 md:gap-12">
           <div className="space-y-3">
@@ -26,6 +40,6 @@ export default function Hero() {
           <Image src={macbook} alt="Macbook" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

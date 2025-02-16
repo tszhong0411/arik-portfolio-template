@@ -1,17 +1,31 @@
+"use client";
+
 import Card from "@/components/ui/card";
 import { SERVICES } from "@/config";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { Fragment } from "react";
+
+const MotionCard = motion.create(Card);
 
 export default function Webdesign() {
   return (
     <div className="pt-12 pb-16 px-6 md:pt-16 md:pb-24 md:px-10 xl:pt-32 xl:pb-40 xl:px-12">
       <div className="max-w-300 mx-auto flex flex-col gap-6 md:gap-8">
         {SERVICES.map((service) => (
-          <Card
+          <MotionCard
             key={service.category}
             id={service.id}
             className="flex flex-col gap-12 p-8 md:p-12 xl:p-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              ease: [0.5, 1, 0.89, 1],
+            }}
+            viewport={{
+              once: true,
+            }}
           >
             <div className="space-y-4">
               <p className="text-sm uppercase tracking-wider">
@@ -40,7 +54,7 @@ export default function Webdesign() {
                 </Fragment>
               ))}
             </div>
-          </Card>
+          </MotionCard>
         ))}
       </div>
     </div>

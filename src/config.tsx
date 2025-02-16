@@ -18,7 +18,14 @@ import {
   ClientLogo6,
   ClientLogo7,
 } from "./components/home/logos";
-import { FaBehance, FaDribbble, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaBehance,
+  FaDribbble,
+  FaFacebook,
+  FaInstagram,
+  FaPinterest,
+  FaTwitter,
+} from "react-icons/fa";
 import { IconType } from "react-icons";
 import Button from "./components/ui/button";
 import { ArrowUpRightIcon } from "lucide-react";
@@ -701,5 +708,38 @@ export const PRICING_CARDS: PricingCard[] = [
     description:
       "Elite web design package with SEO optimization, research, and SEO support for businesses looking to dominate their market.",
     features: ["Webdesign", "Development", "Content", "SEO"],
+  },
+];
+
+export const CONTACT_CARDS = [
+  {
+    title: "Instagram",
+    icon: FaInstagram,
+    href: "https://instagram.com/gola.design",
+  },
+  {
+    title: "Twitter",
+    icon: FaTwitter,
+    href: "https://twitter.com/gola99",
+  },
+  {
+    title: "Facebook",
+    icon: FaFacebook,
+    href: "https://facebook.com/",
+  },
+  {
+    title: "Behance",
+    icon: FaBehance,
+    href: "https://www.behance.net/pawelgola",
+  },
+  {
+    title: "Dribbble",
+    icon: FaDribbble,
+    href: "https://dribbble.com/pawelgola",
+  },
+  {
+    title: "Pinterest",
+    icon: FaPinterest,
+    href: "https://www.pinterest.de/gola_design/",
   },
 ];

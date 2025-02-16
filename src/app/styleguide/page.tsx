@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function StyleguidePage() {
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="py-4 bg-muted backdrop-blur-[30px] fixed top-0 inset-x-0 md:hidden">
+      <div className="py-4 bg-muted backdrop-blur-[30px] fixed top-0 inset-x-0 z-50 md:hidden">
         <Link href="/">
           <Logo className="mx-auto" />
         </Link>
@@ -30,7 +30,9 @@ export default function StyleguidePage() {
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-12">
               {section.variants.map((variant, i) => (
                 <div key={i} className="space-y-8">
-                  <p className="uppercase text-sm">{variant.title}</p>
+                  <p className="uppercase text-sm tracking-wider">
+                    {variant.title}
+                  </p>
                   {variant.component}
                 </div>
               ))}

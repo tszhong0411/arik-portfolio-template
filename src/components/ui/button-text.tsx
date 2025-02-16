@@ -9,7 +9,7 @@ type ButtonTextProps = {
   VariantProps<typeof buttonTextIconVariants>;
 
 export const buttonTextVariants = cva({
-  base: "inline-flex justify-center items-center gap-3 uppercase group text-sm tracking-widest",
+  base: "inline-flex justify-center items-center gap-3 uppercase group text-sm tracking-wider",
 });
 
 export const buttonTextIconVariants = cva({

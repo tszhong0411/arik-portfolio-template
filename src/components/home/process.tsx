@@ -25,7 +25,7 @@ export default function Process() {
 function Title() {
   return (
     <>
-      <p className="text-sm uppercase">The process</p>
+      <p className="text-sm uppercase tracking-wider">The process</p>
       <p className="text-6xl md:text-7xl xl:text-8xl font-light">
         Your Website
       </p>
@@ -133,8 +133,10 @@ function Step({
           <Label className="md:absolute md:right-6 md:top-6">{label}</Label>
           <div className="space-y-4">
             <div className="space-y-1">
-              <p className="text-sm text-muted uppercase">{subtitle}</p>
-              <h3 className="text-xl font-light uppercase md:text-2xl">
+              <p className="text-sm text-muted uppercase tracking-wider">
+                {subtitle}
+              </p>
+              <h3 className="text-xl font-light uppercase tracking-wider md:text-2xl">
                 {title}
               </h3>
             </div>

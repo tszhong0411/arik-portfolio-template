@@ -19,7 +19,7 @@ export default function About({ slug }: AboutProps) {
     <div className="py-16 px-6 md:pb-24 md:px-10 xl:py-32 xl:px-12">
       <div className="max-w-350 mx-auto flex flex-col gap-8 xl:gap-24 xl:flex-row xl:items-start">
         <div className="flex flex-col items-center gap-2 xl:items-start xl:flex-1 xl:sticky xl:top-32">
-          <p className="text-sm text-muted uppercase tracking-widest">Client</p>
+          <p className="text-sm text-muted uppercase tracking-wider">Client</p>
           <p className="text-3xl font-light text-center md:text-4xl xl:text-left">
             {details.headline}
           </p>

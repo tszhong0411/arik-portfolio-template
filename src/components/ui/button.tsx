@@ -3,7 +3,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "cva";
 
 export const buttonVariants = cva({
-  base: "rounded-xs px-4 py-2.5 text-xs tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 uppercase",
+  base: "rounded-xs px-4 py-2.5 text-xs tracking-wider transition-colors duration-300 flex items-center justify-center gap-2 uppercase",
   variants: {
     variant: {
       default: "bg-muted hover:bg-muted-hover border hover:border-border-hover",

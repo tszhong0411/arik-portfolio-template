@@ -25,7 +25,9 @@ function ServiceCard({ number, title, description, link }: ServiceCardProps) {
       <div className="space-y-2">
         <div className="space-y-1">
           <div className="text-muted text-sm">{number}</div>
-          <h4 className="text-xl md:text-2xl uppercase font-light">{title}</h4>
+          <h4 className="text-xl md:text-2xl uppercase font-light tracking-wider">
+            {title}
+          </h4>
         </div>
         <div className="text-sm md:text-base font-chillax font-light">
           {description}

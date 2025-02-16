@@ -48,7 +48,7 @@ export default function Footer() {
                 key={link.label}
                 href={link.href}
                 className={cn(
-                  "text-sm text-muted uppercase tracking-widest",
+                  "text-sm text-muted uppercase tracking-wider",
                   pathname === link.href && "text-default"
                 )}
               >
@@ -75,7 +75,7 @@ export default function Footer() {
                 key={link.label}
                 href={link.href}
                 className={cn(
-                  "text-sm text-muted uppercase tracking-widest",
+                  "text-sm text-muted uppercase tracking-wider",
                   pathname === link.href && "text-default"
                 )}
               >
@@ -92,7 +92,7 @@ export default function Footer() {
                 key={link.label}
                 href={link.href}
                 className={cn(
-                  "text-sm text-muted uppercase tracking-widest",
+                  "text-sm text-muted uppercase tracking-wider",
                   pathname === link.href && "text-default"
                 )}
               >

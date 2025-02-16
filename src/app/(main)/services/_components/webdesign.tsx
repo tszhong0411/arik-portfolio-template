@@ -14,7 +14,9 @@ export default function Webdesign() {
             className="flex flex-col gap-12 p-8 md:p-12 xl:p-16"
           >
             <div className="space-y-4">
-              <p className="uppercase">{service.category}</p>
+              <p className="text-sm uppercase tracking-wider">
+                {service.category}
+              </p>
               <h2 className="text-4xl font-light">{service.title}</h2>
             </div>
             <div className="relative border rounded-xs">
@@ -25,7 +27,7 @@ export default function Webdesign() {
               {service.items.map((item, i) => (
                 <Fragment key={item.title}>
                   <div className="flex flex-col gap-4 xl:flex-row xl:gap-2">
-                    <p className="text-sm uppercase w-62.5 shrink-0 tracking-widest">
+                    <p className="text-sm uppercase w-62.5 shrink-0 tracking-wider">
                       {item.title}
                     </p>
                     <p className="text-sm md:text-base font-chillax font-light">

@@ -49,7 +49,7 @@ export default function Hero({ slug }: HeroProps) {
 
 function MetaCard({ title, content }: Project["meta"][0]) {
   return (
-    <Card className="flex flex-1 flex-col items-center gap-2 p-4 uppercase text-sm tracking-widest">
+    <Card className="flex flex-1 flex-col items-center gap-2 p-4 uppercase text-sm tracking-wider">
       <p className="text-muted">{title}</p>
       {content.href ? (
         <Link href={content.href}>{content.label}</Link>

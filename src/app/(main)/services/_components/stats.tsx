@@ -6,7 +6,9 @@ export default function Stats() {
       <div className="max-w-300 mx-auto grid gap-8 grid-cols-2 md:gap-12 xl:grid-cols-4">
         {STATS.map((stat, i) => (
           <div key={i} className="space-y-1 text-center">
-            <p className="text-muted text-sm uppercase">{stat.title}</p>
+            <p className="text-muted text-sm uppercase tracking-wider">
+              {stat.title}
+            </p>
             <p className="text-4xl md:text-5xl xl:text-6xl font-light">
               {stat.number}
             </p>

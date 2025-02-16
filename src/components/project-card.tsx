@@ -29,7 +29,7 @@ export default function ProjectCard({
       <div className="p-4 md:p-6 absolute bottom-0 inset-x-0 z-20">
         <div className="backdrop-blur-[15px] bg-muted border py-2 px-4 rounded-xs flex justify-between items-center">
           <h3 className="text-xl md:text-2xl font-light">{title}</h3>
-          <p className="text-xs md:text-sm uppercase tracking-widest">
+          <p className="text-xs md:text-sm uppercase tracking-wider">
             {meta.find((m) => m.title === "category")?.content.label}
           </p>
         </div>

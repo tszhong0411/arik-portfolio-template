@@ -2,7 +2,7 @@ import { cn } from "@/utils/cn";
 import { cva, VariantProps } from "cva";
 
 const labelVariants = cva({
-  base: "rounded-xs backdrop-blur-[15px] text-xs tracking-widest uppercase px-2 py-1.25 max-w-max",
+  base: "rounded-xs backdrop-blur-[15px] text-xs tracking-wider uppercase px-2 py-1.25 max-w-max",
   variants: {
     variant: {
       default: "bg-muted border",

@@ -9,11 +9,13 @@ export default function CTA() {
     <section className="bg-muted">
       <Marquee
         className="bg-muted border-y h-12 gap-8"
-        innerClassName="items-center gap-8 [--gap:32px] [--duration:25s]"
+        innerClassName="items-center gap-8 [--gap:32px] [--duration:20s]"
       >
         {Array.from({ length: 12 }).map((_, i) => (
           <Fragment key={i}>
-            <div className="uppercase text-sm">Let&apos;s Talk</div>
+            <div className="uppercase text-sm tracking-wider">
+              Let&apos;s Talk
+            </div>
             <div className="text-sm">+++</div>
           </Fragment>
         ))}
@@ -21,7 +23,7 @@ export default function CTA() {
       <div className="py-16 px-6 md:px-10 md:py-24 xl:px-12 xl:py-40">
         <div className="flex flex-col items-center max-w-300 gap-12 mx-auto">
           <div className="flex flex-col items-center gap-4">
-            <p className="uppercase text-sm">Project in mind?</p>
+            <p className="uppercase text-sm tracking-wider">Project in mind?</p>
             <div className="text-6xl md:text-7xl xl:text-9xl font-light text-center">
               <p>Let’s make your</p>
               <p className="font-gambetta italic">Website shine</p>

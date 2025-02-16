@@ -66,7 +66,7 @@ function Testimonial({
       <div className="flex items-center gap-4">
         <Image src={image} alt={name} className="size-15 rounded-full" />
         <div>
-          <p className="text-sm uppercase">{name}</p>
+          <p className="text-sm uppercase tracking-wider">{name}</p>
           <p className="text-sm font-chillax font-light">{company}</p>
         </div>
       </div>

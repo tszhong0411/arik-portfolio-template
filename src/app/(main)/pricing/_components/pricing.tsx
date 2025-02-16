@@ -17,7 +17,7 @@ export default function Pricing() {
           >
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-2">
-                <p className="text-sm uppercase tracking-widest">{card.plan}</p>
+                <p className="text-sm uppercase tracking-wider">{card.plan}</p>
                 <h3 className="text-2xl font-light md:text-3xl">
                   {card.price}
                 </h3>
@@ -28,7 +28,7 @@ export default function Pricing() {
               <div className="flex flex-col gap-4">
                 {card.features.map((feature, i) => (
                   <Fragment key={`${card.plan}-${feature}`}>
-                    <p className="text-sm uppercase tracking-widest">
+                    <p className="text-sm uppercase tracking-wider">
                       {feature}
                     </p>
                     {i !== card.features.length - 1 && (

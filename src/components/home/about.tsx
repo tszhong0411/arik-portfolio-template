@@ -7,6 +7,7 @@ import { FaTwitter, FaInstagram, FaDribbble, FaBehance } from "react-icons/fa";
 import { buttonTextIconVariants } from "../ui/button-text";
 import { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "motion/react";
+import { useEffect, useState } from "react";
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,7 +20,7 @@ export default function About() {
     <section className="flex flex-col items-center justify-center gap-8 py-16 md:gap-16 md:pb-24 xl:pt-24 xl:pb-40">
       <div
         ref={ref}
-        className="flex flex-col items-center justify-center gap-4 overflow-x-hidden md:flex-row md:gap-0 xl:gap-8"
+        className="flex w-full flex-col items-center justify-center gap-4 overflow-x-hidden md:flex-row md:gap-0 xl:gap-8"
       >
         <Name position="left" scrollYProgress={scrollYProgress} />
         <Image
@@ -74,12 +75,30 @@ type NameProps = React.ComponentProps<"p"> & {
 };
 
 function Name({ position, scrollYProgress, className, ...rest }: NameProps) {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    setIsDesktop(mediaQuery.matches);
+
+    const handleResize = (e: MediaQueryListEvent) => {
+      setIsDesktop(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleResize);
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
+
   const x = useTransform(
     scrollYProgress,
     [0, 0.5],
-    [position === "left" ? -100 : 100, 0],
+    isDesktop ? [position === "left" ? -100 : 100, 0] : [0, 0],
   );
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.6],
+    isDesktop ? [0, 1] : [1, 1],
+  );
 
   return (
     <motion.div

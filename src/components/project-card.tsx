@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { buttonTextIconVariants } from "./ui/button-text";

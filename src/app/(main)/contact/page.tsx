@@ -10,14 +10,10 @@ import heroImage from "~/images/arik.png";
 export default function ContactPage() {
   return (
     <div className="pt-24 pb-16 px-6 md:pt-32 md:pb-24 md:px-10 xl:pt-48 xl:pb-40 xl:px-12">
-      <div className="max-w-300 mx-auto xl:flex xl:gap-12">
+      <div className="max-w-300 mx-auto xl:flex xl:items-start xl:gap-12">
         <Image
-          className="hidden xl:block"
+          className="hidden w-100 xl:block"
           src={heroImage}
-          style={{
-            width: 400,
-            height: 497.5,
-          }}
           alt="Hero image"
         />
         <div className="flex flex-col gap-4 flex-1">

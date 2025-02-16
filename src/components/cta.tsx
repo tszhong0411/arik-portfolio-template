@@ -1,8 +1,11 @@
+"use client";
+
 import { Fragment } from "react";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "lucide-react";
 import Marquee from "./ui/marquee";
 import Button from "./ui/button";
+import { motion } from "motion/react";
 
 export default function CTA() {
   return (
@@ -24,10 +27,21 @@ export default function CTA() {
         <div className="flex flex-col items-center max-w-300 gap-12 mx-auto">
           <div className="flex flex-col items-center gap-4">
             <p className="uppercase text-sm tracking-wider">Project in mind?</p>
-            <div className="text-6xl md:text-7xl xl:text-9xl font-light text-center">
+            <motion.div
+              className="text-6xl md:text-7xl xl:text-9xl font-light text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                ease: [0.5, 1, 0.89, 1],
+              }}
+              viewport={{
+                once: true,
+              }}
+            >
               <p>Let’s make your</p>
               <p className="font-gambetta italic">Website shine</p>
-            </div>
+            </motion.div>
             <p className="text-xl font-chillax font-light max-w-125 text-center">
               Premium web design, development, and SEO services to help your
               business stand out.

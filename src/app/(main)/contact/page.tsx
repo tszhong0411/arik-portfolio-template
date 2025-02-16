@@ -1,10 +1,9 @@
+import SlideAnimation from "@/components/slide-animation";
 import SocialCards from "@/components/social-cards";
 import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
 import Input from "@/components/ui/input";
 import Textarea from "@/components/ui/textarea";
-import { SOCIAL_CARDS } from "@/config";
-import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import heroImage from "~/images/arik.png";
 
@@ -18,27 +17,29 @@ export default function ContactPage() {
           alt="Hero image"
         />
         <div className="flex flex-col gap-4 flex-1">
-          <Card className="flex flex-col gap-8 p-8 md:p-10 xl:p-12">
-            <div className="flex flex-col gap-2">
-              <p className="text-sm text-muted uppercase tracking-wider">
-                Contact
-              </p>
-              <h2 className="text-3xl font-light tracking-wider md:text-4xl">
-                Let&apos;s get in touch
-              </h2>
-            </div>
-            <div className="flex flex-col gap-4">
-              <Input type="text" placeholder="Name" />
-              <Input type="email" placeholder="Email" />
-              <Textarea placeholder="Message" />
-              <Button
-                variant="primary"
-                className="normal-case text-base font-semibold p-3.75"
-              >
-                Send Message
-              </Button>
-            </div>
-          </Card>
+          <SlideAnimation asChild>
+            <Card className="flex flex-col gap-8 p-8 md:p-10 xl:p-12">
+              <div className="flex flex-col gap-2">
+                <p className="text-sm text-muted uppercase tracking-wider">
+                  Contact
+                </p>
+                <h2 className="text-3xl font-light tracking-wider md:text-4xl">
+                  Let&apos;s get in touch
+                </h2>
+              </div>
+              <div className="flex flex-col gap-4">
+                <Input type="text" placeholder="Name" />
+                <Input type="email" placeholder="Email" />
+                <Textarea placeholder="Message" />
+                <Button
+                  variant="primary"
+                  className="normal-case text-base font-semibold p-3.75"
+                >
+                  Send Message
+                </Button>
+              </div>
+            </Card>
+          </SlideAnimation>
           <SocialCards />
         </div>
       </div>
